@@ -3,6 +3,8 @@ mcp-python-sdk>=0.1.0
 fastapi>=0.104.0
 uvicorn>=0.23.2
 pydantic>=2.4.2
+anthropic>=0.39.0
+
 
 # Utility libraries
 python-dotenv>=1.0.0
