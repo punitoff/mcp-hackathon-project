@@ -1,0 +1,46 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "ddbe98a8-6d73-0701-6624-0de91527b42f",
+  "sessions": [
+    {
+      "gameId": "apple_picking",
+      "date": "2025-01-31T19:06:18.572730+00:00Z",
+      "score": 22,
+      "duration_minutes": 9,
+      "quality": 79,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-07-18T19:06:18.572745+00:00Z",
+      "score": 20,
+      "duration_minutes": 3,
+      "quality": 35,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2024-12-20T19:06:18.572749+00:00Z",
+      "score": 21,
+      "duration_minutes": 7,
+      "quality": 85,
+      "notes": ""
+    },
+    {
+      "gameId": "tomato_dodge",
+      "date": "2024-10-22T19:06:18.572752+00:00Z",
+      "score": 20,
+      "duration_minutes": 3,
+      "quality": 45,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-10-28T19:06:18.572754+00:00Z",
+      "score": 16,
+      "duration_minutes": 8,
+      "quality": 33,
+      "notes": ""
+    }
+  ]
+}

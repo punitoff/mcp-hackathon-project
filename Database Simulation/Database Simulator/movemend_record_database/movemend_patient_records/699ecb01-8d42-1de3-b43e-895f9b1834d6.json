@@ -1,0 +1,22 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "699ecb01-8d42-1de3-b43e-895f9b1834d6",
+  "sessions": [
+    {
+      "gameId": "flying",
+      "date": "2025-04-11T19:06:19.928175+00:00Z",
+      "score": 23,
+      "duration_minutes": 8,
+      "quality": 39,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2024-08-19T19:06:19.928195+00:00Z",
+      "score": 20,
+      "duration_minutes": 2,
+      "quality": 35,
+      "notes": ""
+    }
+  ]
+}

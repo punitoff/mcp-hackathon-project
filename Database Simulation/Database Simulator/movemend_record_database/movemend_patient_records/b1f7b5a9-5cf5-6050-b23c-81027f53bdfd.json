@@ -1,0 +1,62 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "b1f7b5a9-5cf5-6050-b23c-81027f53bdfd",
+  "sessions": [
+    {
+      "gameId": "rowing",
+      "date": "2025-05-14T19:06:18.864304+00:00Z",
+      "score": 15,
+      "duration_minutes": 10,
+      "quality": 38,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2024-11-13T19:06:18.864323+00:00Z",
+      "score": 24,
+      "duration_minutes": 9,
+      "quality": 67,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-05-18T19:06:18.864327+00:00Z",
+      "score": 10,
+      "duration_minutes": 3,
+      "quality": 42,
+      "notes": ""
+    },
+    {
+      "gameId": "tomato_dodge",
+      "date": "2025-05-10T19:06:18.864331+00:00Z",
+      "score": 18,
+      "duration_minutes": 5,
+      "quality": 54,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2024-06-25T19:06:18.864334+00:00Z",
+      "score": 25,
+      "duration_minutes": 9,
+      "quality": 99,
+      "notes": ""
+    },
+    {
+      "gameId": "tomato_dodge",
+      "date": "2025-05-07T19:06:18.864337+00:00Z",
+      "score": 25,
+      "duration_minutes": 8,
+      "quality": 66,
+      "notes": ""
+    },
+    {
+      "gameId": "gardening",
+      "date": "2025-02-12T19:06:18.864340+00:00Z",
+      "score": 19,
+      "duration_minutes": 4,
+      "quality": 64,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "5c0279c6-73ab-f684-a59f-196c3f7257e6",
+  "sessions": [
+    {
+      "gameId": "gardening",
+      "date": "2025-05-15T19:06:18.838906+00:00Z",
+      "score": 23,
+      "duration_minutes": 7,
+      "quality": 30,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-11-15T19:06:18.838926+00:00Z",
+      "score": 18,
+      "duration_minutes": 4,
+      "quality": 73,
+      "notes": ""
+    },
+    {
+      "gameId": "soccer",
+      "date": "2025-01-05T19:06:18.838930+00:00Z",
+      "score": 14,
+      "duration_minutes": 3,
+      "quality": 25,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2025-03-03T19:06:18.838933+00:00Z",
+      "score": 18,
+      "duration_minutes": 9,
+      "quality": 84,
+      "notes": ""
+    },
+    {
+      "gameId": "apple_picking",
+      "date": "2025-02-03T19:06:18.838936+00:00Z",
+      "score": 18,
+      "duration_minutes": 6,
+      "quality": 27,
+      "notes": ""
+    }
+  ]
+}

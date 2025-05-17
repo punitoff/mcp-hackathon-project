@@ -1,0 +1,46 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "d0e02a1c-d2dd-136a-b1fb-5d29fc4aa89b",
+  "sessions": [
+    {
+      "gameId": "flying",
+      "date": "2024-07-27T19:06:19.069257+00:00Z",
+      "score": 14,
+      "duration_minutes": 3,
+      "quality": 100,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-08-22T19:06:19.069279+00:00Z",
+      "score": 14,
+      "duration_minutes": 10,
+      "quality": 50,
+      "notes": ""
+    },
+    {
+      "gameId": "tomato_dodge",
+      "date": "2024-12-22T19:06:19.069282+00:00Z",
+      "score": 21,
+      "duration_minutes": 2,
+      "quality": 73,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2024-06-19T19:06:19.069285+00:00Z",
+      "score": 23,
+      "duration_minutes": 3,
+      "quality": 75,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2024-12-20T19:06:19.069288+00:00Z",
+      "score": 11,
+      "duration_minutes": 4,
+      "quality": 81,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "0fe22cec-1a19-99da-b67f-7ce364c4cf3e",
+  "sessions": [
+    {
+      "gameId": "skate",
+      "date": "2025-02-28T19:06:19.234565+00:00Z",
+      "score": 21,
+      "duration_minutes": 1,
+      "quality": 45,
+      "notes": ""
+    },
+    {
+      "gameId": "apple_picking",
+      "date": "2025-02-22T19:06:19.234582+00:00Z",
+      "score": 21,
+      "duration_minutes": 3,
+      "quality": 45,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2025-03-09T19:06:19.234585+00:00Z",
+      "score": 10,
+      "duration_minutes": 6,
+      "quality": 50,
+      "notes": ""
+    },
+    {
+      "gameId": "skate",
+      "date": "2024-06-03T19:06:19.234589+00:00Z",
+      "score": 17,
+      "duration_minutes": 7,
+      "quality": 58,
+      "notes": ""
+    }
+  ]
+}

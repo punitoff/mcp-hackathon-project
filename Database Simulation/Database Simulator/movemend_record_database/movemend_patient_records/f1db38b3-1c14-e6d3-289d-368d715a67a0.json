@@ -1,0 +1,62 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "f1db38b3-1c14-e6d3-289d-368d715a67a0",
+  "sessions": [
+    {
+      "gameId": "tomato_dodge",
+      "date": "2024-08-16T19:06:19.129940+00:00Z",
+      "score": 23,
+      "duration_minutes": 1,
+      "quality": 39,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2024-12-26T19:06:19.129960+00:00Z",
+      "score": 19,
+      "duration_minutes": 8,
+      "quality": 75,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-12-20T19:06:19.129964+00:00Z",
+      "score": 14,
+      "duration_minutes": 6,
+      "quality": 77,
+      "notes": ""
+    },
+    {
+      "gameId": "apple_picking",
+      "date": "2024-12-12T19:06:19.129967+00:00Z",
+      "score": 21,
+      "duration_minutes": 4,
+      "quality": 81,
+      "notes": ""
+    },
+    {
+      "gameId": "skate",
+      "date": "2024-09-25T19:06:19.129970+00:00Z",
+      "score": 17,
+      "duration_minutes": 6,
+      "quality": 35,
+      "notes": ""
+    },
+    {
+      "gameId": "apple_picking",
+      "date": "2025-05-01T19:06:19.129973+00:00Z",
+      "score": 15,
+      "duration_minutes": 1,
+      "quality": 75,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2024-12-19T19:06:19.129976+00:00Z",
+      "score": 19,
+      "duration_minutes": 5,
+      "quality": 85,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "9c57cb28-f025-eb5d-5018-749693f1cd46",
+  "sessions": [
+    {
+      "gameId": "soccer",
+      "date": "2025-03-26T19:06:18.447826+00:00Z",
+      "score": 21,
+      "duration_minutes": 1,
+      "quality": 31,
+      "notes": ""
+    },
+    {
+      "gameId": "apple_picking",
+      "date": "2025-02-08T19:06:18.447845+00:00Z",
+      "score": 21,
+      "duration_minutes": 4,
+      "quality": 84,
+      "notes": ""
+    },
+    {
+      "gameId": "tomato_dodge",
+      "date": "2024-06-11T19:06:18.447849+00:00Z",
+      "score": 19,
+      "duration_minutes": 4,
+      "quality": 94,
+      "notes": ""
+    },
+    {
+      "gameId": "soccer",
+      "date": "2024-09-14T19:06:18.447852+00:00Z",
+      "score": 19,
+      "duration_minutes": 2,
+      "quality": 62,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2024-07-28T19:06:18.447856+00:00Z",
+      "score": 24,
+      "duration_minutes": 9,
+      "quality": 98,
+      "notes": ""
+    }
+  ]
+}

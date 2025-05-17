@@ -1,0 +1,14 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "488bff1c-ccdc-f85f-a347-8bddf6c33568",
+  "sessions": [
+    {
+      "gameId": "tomato_dodge",
+      "date": "2025-02-28T19:06:20.313262+00:00Z",
+      "score": 20,
+      "duration_minutes": 9,
+      "quality": 89,
+      "notes": ""
+    }
+  ]
+}

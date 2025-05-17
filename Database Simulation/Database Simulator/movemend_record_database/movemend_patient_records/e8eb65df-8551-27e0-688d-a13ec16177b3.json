@@ -1,0 +1,30 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "e8eb65df-8551-27e0-688d-a13ec16177b3",
+  "sessions": [
+    {
+      "gameId": "hot_potato",
+      "date": "2025-02-06T19:06:19.784985+00:00Z",
+      "score": 25,
+      "duration_minutes": 4,
+      "quality": 70,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-09-15T19:06:19.785003+00:00Z",
+      "score": 22,
+      "duration_minutes": 10,
+      "quality": 43,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2024-10-20T19:06:19.785006+00:00Z",
+      "score": 15,
+      "duration_minutes": 5,
+      "quality": 67,
+      "notes": ""
+    }
+  ]
+}

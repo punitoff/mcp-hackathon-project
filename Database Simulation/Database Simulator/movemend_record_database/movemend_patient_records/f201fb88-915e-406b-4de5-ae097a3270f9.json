@@ -1,0 +1,62 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "f201fb88-915e-406b-4de5-ae097a3270f9",
+  "sessions": [
+    {
+      "gameId": "berry_picking",
+      "date": "2025-01-27T19:06:18.367694+00:00Z",
+      "score": 20,
+      "duration_minutes": 5,
+      "quality": 53,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2024-07-01T19:06:18.367714+00:00Z",
+      "score": 23,
+      "duration_minutes": 3,
+      "quality": 97,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2024-09-16T19:06:18.367718+00:00Z",
+      "score": 15,
+      "duration_minutes": 4,
+      "quality": 34,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2025-01-24T19:06:18.367722+00:00Z",
+      "score": 15,
+      "duration_minutes": 8,
+      "quality": 53,
+      "notes": ""
+    },
+    {
+      "gameId": "gardening",
+      "date": "2025-03-10T19:06:18.367725+00:00Z",
+      "score": 18,
+      "duration_minutes": 5,
+      "quality": 65,
+      "notes": ""
+    },
+    {
+      "gameId": "apple_picking",
+      "date": "2025-03-23T19:06:18.367727+00:00Z",
+      "score": 21,
+      "duration_minutes": 5,
+      "quality": 40,
+      "notes": ""
+    },
+    {
+      "gameId": "skate",
+      "date": "2024-10-19T19:06:18.367730+00:00Z",
+      "score": 10,
+      "duration_minutes": 3,
+      "quality": 50,
+      "notes": ""
+    }
+  ]
+}

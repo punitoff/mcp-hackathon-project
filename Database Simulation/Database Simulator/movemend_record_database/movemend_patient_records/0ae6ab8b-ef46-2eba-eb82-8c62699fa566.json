@@ -1,0 +1,30 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "0ae6ab8b-ef46-2eba-eb82-8c62699fa566",
+  "sessions": [
+    {
+      "gameId": "tomato_dodge",
+      "date": "2024-08-01T19:06:20.437964+00:00Z",
+      "score": 10,
+      "duration_minutes": 6,
+      "quality": 77,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-11-19T19:06:20.437985+00:00Z",
+      "score": 20,
+      "duration_minutes": 8,
+      "quality": 92,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2024-05-28T19:06:20.437989+00:00Z",
+      "score": 14,
+      "duration_minutes": 3,
+      "quality": 81,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "557a8799-1fca-b6a2-532c-9021b49e863d",
+  "sessions": [
+    {
+      "gameId": "flying",
+      "date": "2024-08-14T19:06:19.396923+00:00Z",
+      "score": 14,
+      "duration_minutes": 4,
+      "quality": 46,
+      "notes": ""
+    }
+  ]
+}

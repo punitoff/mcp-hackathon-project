@@ -1,0 +1,30 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "3c0acc7b-7f6e-f130-a86e-99fc3ff1a620",
+  "sessions": [
+    {
+      "gameId": "gardening",
+      "date": "2024-11-21T19:06:20.524566+00:00Z",
+      "score": 22,
+      "duration_minutes": 3,
+      "quality": 35,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2025-03-28T19:06:20.524579+00:00Z",
+      "score": 11,
+      "duration_minutes": 2,
+      "quality": 74,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2025-03-27T19:06:20.524582+00:00Z",
+      "score": 13,
+      "duration_minutes": 4,
+      "quality": 64,
+      "notes": ""
+    }
+  ]
+}

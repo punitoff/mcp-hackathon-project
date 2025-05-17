@@ -1,0 +1,22 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "e4d79ec8-bb2f-b4d3-f549-52f78695eb20",
+  "sessions": [
+    {
+      "gameId": "soccer",
+      "date": "2024-12-12T19:06:18.216703+00:00Z",
+      "score": 22,
+      "duration_minutes": 4,
+      "quality": 79,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2024-08-21T19:06:18.216962+00:00Z",
+      "score": 22,
+      "duration_minutes": 5,
+      "quality": 25,
+      "notes": ""
+    }
+  ]
+}

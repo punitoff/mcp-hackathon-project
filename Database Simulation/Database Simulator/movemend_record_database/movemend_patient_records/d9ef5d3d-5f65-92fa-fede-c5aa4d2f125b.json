@@ -1,0 +1,38 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "d9ef5d3d-5f65-92fa-fede-c5aa4d2f125b",
+  "sessions": [
+    {
+      "gameId": "soccer",
+      "date": "2024-12-04T19:06:18.719300+00:00Z",
+      "score": 23,
+      "duration_minutes": 9,
+      "quality": 38,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2025-01-30T19:06:18.719318+00:00Z",
+      "score": 19,
+      "duration_minutes": 2,
+      "quality": 79,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2025-02-27T19:06:18.719321+00:00Z",
+      "score": 10,
+      "duration_minutes": 7,
+      "quality": 38,
+      "notes": ""
+    },
+    {
+      "gameId": "gardening",
+      "date": "2024-07-05T19:06:18.719324+00:00Z",
+      "score": 10,
+      "duration_minutes": 6,
+      "quality": 66,
+      "notes": ""
+    }
+  ]
+}

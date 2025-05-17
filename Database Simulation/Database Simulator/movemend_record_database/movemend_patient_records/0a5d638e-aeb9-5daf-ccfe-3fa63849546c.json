@@ -1,0 +1,38 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "0a5d638e-aeb9-5daf-ccfe-3fa63849546c",
+  "sessions": [
+    {
+      "gameId": "gardening",
+      "date": "2024-09-06T19:06:18.309428+00:00Z",
+      "score": 22,
+      "duration_minutes": 10,
+      "quality": 25,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2024-11-27T19:06:18.309444+00:00Z",
+      "score": 12,
+      "duration_minutes": 9,
+      "quality": 94,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2024-08-10T19:06:18.309447+00:00Z",
+      "score": 16,
+      "duration_minutes": 7,
+      "quality": 87,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2025-05-09T19:06:18.309450+00:00Z",
+      "score": 16,
+      "duration_minutes": 3,
+      "quality": 89,
+      "notes": ""
+    }
+  ]
+}

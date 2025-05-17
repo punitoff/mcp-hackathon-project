@@ -1,0 +1,30 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "983b907a-20ab-06cb-48b8-acd879435fff",
+  "sessions": [
+    {
+      "gameId": "apple_picking",
+      "date": "2025-03-28T19:06:19.016161+00:00Z",
+      "score": 21,
+      "duration_minutes": 3,
+      "quality": 47,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2025-01-14T19:06:19.016194+00:00Z",
+      "score": 23,
+      "duration_minutes": 7,
+      "quality": 56,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2024-11-21T19:06:19.016198+00:00Z",
+      "score": 13,
+      "duration_minutes": 3,
+      "quality": 79,
+      "notes": ""
+    }
+  ]
+}

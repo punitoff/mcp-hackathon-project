@@ -1,0 +1,38 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "404b90e6-0a96-99d2-fe3a-95927fa6e09a",
+  "sessions": [
+    {
+      "gameId": "flying",
+      "date": "2024-06-24T19:06:19.695275+00:00Z",
+      "score": 14,
+      "duration_minutes": 9,
+      "quality": 92,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-10-12T19:06:19.695288+00:00Z",
+      "score": 25,
+      "duration_minutes": 1,
+      "quality": 89,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2024-10-02T19:06:19.695291+00:00Z",
+      "score": 13,
+      "duration_minutes": 1,
+      "quality": 99,
+      "notes": ""
+    },
+    {
+      "gameId": "tomato_dodge",
+      "date": "2025-02-26T19:06:19.695294+00:00Z",
+      "score": 21,
+      "duration_minutes": 3,
+      "quality": 85,
+      "notes": ""
+    }
+  ]
+}

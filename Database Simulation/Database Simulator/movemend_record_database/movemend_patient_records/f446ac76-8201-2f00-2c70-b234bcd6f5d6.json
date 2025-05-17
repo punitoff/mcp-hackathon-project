@@ -1,0 +1,38 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "f446ac76-8201-2f00-2c70-b234bcd6f5d6",
+  "sessions": [
+    {
+      "gameId": "tomato_dodge",
+      "date": "2025-02-04T19:06:20.575507+00:00Z",
+      "score": 12,
+      "duration_minutes": 6,
+      "quality": 54,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2025-04-26T19:06:20.575527+00:00Z",
+      "score": 12,
+      "duration_minutes": 8,
+      "quality": 38,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2024-07-05T19:06:20.575531+00:00Z",
+      "score": 19,
+      "duration_minutes": 9,
+      "quality": 33,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2025-03-09T19:06:20.575534+00:00Z",
+      "score": 16,
+      "duration_minutes": 9,
+      "quality": 42,
+      "notes": ""
+    }
+  ]
+}

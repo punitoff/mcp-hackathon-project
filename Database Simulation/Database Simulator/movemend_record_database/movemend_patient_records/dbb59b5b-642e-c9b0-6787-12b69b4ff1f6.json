@@ -1,0 +1,78 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "dbb59b5b-642e-c9b0-6787-12b69b4ff1f6",
+  "sessions": [
+    {
+      "gameId": "hot_potato",
+      "date": "2024-10-24T19:06:19.652330+00:00Z",
+      "score": 20,
+      "duration_minutes": 10,
+      "quality": 39,
+      "notes": ""
+    },
+    {
+      "gameId": "tomato_dodge",
+      "date": "2024-05-25T19:06:19.652349+00:00Z",
+      "score": 18,
+      "duration_minutes": 5,
+      "quality": 69,
+      "notes": ""
+    },
+    {
+      "gameId": "soccer",
+      "date": "2024-10-21T19:06:19.652353+00:00Z",
+      "score": 13,
+      "duration_minutes": 3,
+      "quality": 43,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-09-06T19:06:19.652356+00:00Z",
+      "score": 13,
+      "duration_minutes": 4,
+      "quality": 56,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2024-07-15T19:06:19.652359+00:00Z",
+      "score": 10,
+      "duration_minutes": 3,
+      "quality": 30,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2025-05-08T19:06:19.652363+00:00Z",
+      "score": 14,
+      "duration_minutes": 1,
+      "quality": 60,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2025-04-01T19:06:19.652365+00:00Z",
+      "score": 17,
+      "duration_minutes": 2,
+      "quality": 69,
+      "notes": ""
+    },
+    {
+      "gameId": "soccer",
+      "date": "2024-05-17T19:06:19.652368+00:00Z",
+      "score": 16,
+      "duration_minutes": 4,
+      "quality": 72,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2024-05-30T19:06:19.652371+00:00Z",
+      "score": 24,
+      "duration_minutes": 8,
+      "quality": 39,
+      "notes": ""
+    }
+  ]
+}

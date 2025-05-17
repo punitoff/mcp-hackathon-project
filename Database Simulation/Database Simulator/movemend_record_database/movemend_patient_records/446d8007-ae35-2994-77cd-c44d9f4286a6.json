@@ -1,0 +1,62 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "446d8007-ae35-2994-77cd-c44d9f4286a6",
+  "sessions": [
+    {
+      "gameId": "hot_potato",
+      "date": "2025-02-10T19:06:19.085385+00:00Z",
+      "score": 13,
+      "duration_minutes": 2,
+      "quality": 40,
+      "notes": ""
+    },
+    {
+      "gameId": "soccer",
+      "date": "2024-09-04T19:06:19.085401+00:00Z",
+      "score": 17,
+      "duration_minutes": 2,
+      "quality": 42,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-06-07T19:06:19.085405+00:00Z",
+      "score": 11,
+      "duration_minutes": 4,
+      "quality": 27,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2024-12-28T19:06:19.085408+00:00Z",
+      "score": 16,
+      "duration_minutes": 9,
+      "quality": 68,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2025-03-28T19:06:19.085411+00:00Z",
+      "score": 10,
+      "duration_minutes": 7,
+      "quality": 59,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2024-09-25T19:06:19.085414+00:00Z",
+      "score": 24,
+      "duration_minutes": 7,
+      "quality": 49,
+      "notes": ""
+    },
+    {
+      "gameId": "skate",
+      "date": "2024-11-12T19:06:19.085417+00:00Z",
+      "score": 22,
+      "duration_minutes": 6,
+      "quality": 50,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "94e97d9b-e77d-ccd3-a24c-c6c5c0750e40",
+  "sessions": [
+    {
+      "gameId": "apple_picking",
+      "date": "2024-12-04T19:06:18.292599+00:00Z",
+      "score": 20,
+      "duration_minutes": 4,
+      "quality": 56,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2025-03-04T19:06:18.292619+00:00Z",
+      "score": 24,
+      "duration_minutes": 10,
+      "quality": 28,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-09-08T19:06:18.292623+00:00Z",
+      "score": 25,
+      "duration_minutes": 5,
+      "quality": 41,
+      "notes": ""
+    },
+    {
+      "gameId": "gardening",
+      "date": "2024-09-07T19:06:18.292627+00:00Z",
+      "score": 19,
+      "duration_minutes": 1,
+      "quality": 60,
+      "notes": ""
+    }
+  ]
+}

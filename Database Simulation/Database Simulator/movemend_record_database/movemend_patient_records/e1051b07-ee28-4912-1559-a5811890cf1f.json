@@ -1,0 +1,22 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "e1051b07-ee28-4912-1559-a5811890cf1f",
+  "sessions": [
+    {
+      "gameId": "skate",
+      "date": "2024-07-14T19:06:18.800408+00:00Z",
+      "score": 13,
+      "duration_minutes": 7,
+      "quality": 74,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2024-07-27T19:06:18.800425+00:00Z",
+      "score": 18,
+      "duration_minutes": 2,
+      "quality": 47,
+      "notes": ""
+    }
+  ]
+}

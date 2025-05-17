@@ -1,0 +1,22 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "37e8bf3b-c1f5-4cd9-8f36-df1a9686ddc1",
+  "sessions": [
+    {
+      "gameId": "gardening",
+      "date": "2025-03-05T19:06:18.353680+00:00Z",
+      "score": 20,
+      "duration_minutes": 3,
+      "quality": 37,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2024-05-18T19:06:18.353696+00:00Z",
+      "score": 10,
+      "duration_minutes": 7,
+      "quality": 98,
+      "notes": ""
+    }
+  ]
+}

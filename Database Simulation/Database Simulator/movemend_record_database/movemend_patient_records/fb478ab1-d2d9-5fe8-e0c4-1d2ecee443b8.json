@@ -1,0 +1,54 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "fb478ab1-d2d9-5fe8-e0c4-1d2ecee443b8",
+  "sessions": [
+    {
+      "gameId": "hot_potato",
+      "date": "2024-10-18T19:06:19.423807+00:00Z",
+      "score": 16,
+      "duration_minutes": 9,
+      "quality": 65,
+      "notes": ""
+    },
+    {
+      "gameId": "skate",
+      "date": "2025-02-14T19:06:19.423827+00:00Z",
+      "score": 19,
+      "duration_minutes": 1,
+      "quality": 82,
+      "notes": ""
+    },
+    {
+      "gameId": "tomato_dodge",
+      "date": "2025-04-20T19:06:19.423831+00:00Z",
+      "score": 15,
+      "duration_minutes": 7,
+      "quality": 54,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2024-12-25T19:06:19.423834+00:00Z",
+      "score": 19,
+      "duration_minutes": 8,
+      "quality": 65,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2024-09-12T19:06:19.423836+00:00Z",
+      "score": 23,
+      "duration_minutes": 7,
+      "quality": 83,
+      "notes": ""
+    },
+    {
+      "gameId": "skate",
+      "date": "2025-04-11T19:06:19.423839+00:00Z",
+      "score": 13,
+      "duration_minutes": 5,
+      "quality": 44,
+      "notes": ""
+    }
+  ]
+}

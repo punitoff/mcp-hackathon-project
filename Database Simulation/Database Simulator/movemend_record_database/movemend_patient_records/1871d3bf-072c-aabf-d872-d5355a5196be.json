@@ -1,0 +1,38 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "1871d3bf-072c-aabf-d872-d5355a5196be",
+  "sessions": [
+    {
+      "gameId": "flying",
+      "date": "2024-09-21T19:06:20.459551+00:00Z",
+      "score": 23,
+      "duration_minutes": 5,
+      "quality": 90,
+      "notes": ""
+    },
+    {
+      "gameId": "gardening",
+      "date": "2024-09-15T19:06:20.459567+00:00Z",
+      "score": 10,
+      "duration_minutes": 2,
+      "quality": 64,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2024-08-16T19:06:20.459570+00:00Z",
+      "score": 17,
+      "duration_minutes": 5,
+      "quality": 85,
+      "notes": ""
+    },
+    {
+      "gameId": "soccer",
+      "date": "2025-04-25T19:06:20.459573+00:00Z",
+      "score": 17,
+      "duration_minutes": 8,
+      "quality": 77,
+      "notes": ""
+    }
+  ]
+}

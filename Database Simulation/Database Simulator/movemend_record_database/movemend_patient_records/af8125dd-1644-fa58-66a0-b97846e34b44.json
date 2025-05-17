@@ -1,0 +1,38 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "af8125dd-1644-fa58-66a0-b97846e34b44",
+  "sessions": [
+    {
+      "gameId": "gardening",
+      "date": "2024-07-15T19:06:18.658996+00:00Z",
+      "score": 24,
+      "duration_minutes": 8,
+      "quality": 36,
+      "notes": ""
+    },
+    {
+      "gameId": "apple_picking",
+      "date": "2024-08-04T19:06:18.659017+00:00Z",
+      "score": 10,
+      "duration_minutes": 3,
+      "quality": 77,
+      "notes": ""
+    },
+    {
+      "gameId": "skate",
+      "date": "2025-02-04T19:06:18.659021+00:00Z",
+      "score": 14,
+      "duration_minutes": 7,
+      "quality": 60,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2025-04-05T19:06:18.659024+00:00Z",
+      "score": 24,
+      "duration_minutes": 2,
+      "quality": 27,
+      "notes": ""
+    }
+  ]
+}

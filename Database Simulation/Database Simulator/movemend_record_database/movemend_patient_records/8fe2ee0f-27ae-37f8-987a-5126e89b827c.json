@@ -1,0 +1,30 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "8fe2ee0f-27ae-37f8-987a-5126e89b827c",
+  "sessions": [
+    {
+      "gameId": "flying",
+      "date": "2024-12-11T19:06:19.134847+00:00Z",
+      "score": 11,
+      "duration_minutes": 9,
+      "quality": 74,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2025-04-01T19:06:19.134863+00:00Z",
+      "score": 17,
+      "duration_minutes": 5,
+      "quality": 58,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2025-01-23T19:06:19.134867+00:00Z",
+      "score": 21,
+      "duration_minutes": 8,
+      "quality": 47,
+      "notes": ""
+    }
+  ]
+}

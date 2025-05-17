@@ -1,0 +1,78 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "519b2f54-73d6-d05c-979e-4c81980a35b6",
+  "sessions": [
+    {
+      "gameId": "berry_picking",
+      "date": "2024-05-23T19:06:19.612851+00:00Z",
+      "score": 24,
+      "duration_minutes": 3,
+      "quality": 47,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2024-08-27T19:06:19.612871+00:00Z",
+      "score": 22,
+      "duration_minutes": 4,
+      "quality": 54,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2025-02-01T19:06:19.612874+00:00Z",
+      "score": 14,
+      "duration_minutes": 7,
+      "quality": 62,
+      "notes": ""
+    },
+    {
+      "gameId": "gardening",
+      "date": "2024-11-06T19:06:19.612878+00:00Z",
+      "score": 24,
+      "duration_minutes": 7,
+      "quality": 38,
+      "notes": ""
+    },
+    {
+      "gameId": "gardening",
+      "date": "2024-09-23T19:06:19.612881+00:00Z",
+      "score": 25,
+      "duration_minutes": 4,
+      "quality": 57,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2025-05-09T19:06:19.612884+00:00Z",
+      "score": 24,
+      "duration_minutes": 1,
+      "quality": 84,
+      "notes": ""
+    },
+    {
+      "gameId": "gardening",
+      "date": "2024-11-03T19:06:19.612886+00:00Z",
+      "score": 22,
+      "duration_minutes": 10,
+      "quality": 27,
+      "notes": ""
+    },
+    {
+      "gameId": "gardening",
+      "date": "2025-03-12T19:06:19.612890+00:00Z",
+      "score": 22,
+      "duration_minutes": 1,
+      "quality": 35,
+      "notes": ""
+    },
+    {
+      "gameId": "gardening",
+      "date": "2025-04-14T19:06:19.612892+00:00Z",
+      "score": 17,
+      "duration_minutes": 3,
+      "quality": 62,
+      "notes": ""
+    }
+  ]
+}

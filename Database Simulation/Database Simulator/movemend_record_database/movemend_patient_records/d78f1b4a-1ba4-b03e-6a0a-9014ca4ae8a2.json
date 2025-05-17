@@ -1,0 +1,38 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "d78f1b4a-1ba4-b03e-6a0a-9014ca4ae8a2",
+  "sessions": [
+    {
+      "gameId": "gardening",
+      "date": "2025-01-20T19:06:20.602326+00:00Z",
+      "score": 25,
+      "duration_minutes": 8,
+      "quality": 56,
+      "notes": ""
+    },
+    {
+      "gameId": "soccer",
+      "date": "2024-08-23T19:06:20.602347+00:00Z",
+      "score": 11,
+      "duration_minutes": 4,
+      "quality": 47,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2024-05-25T19:06:20.602351+00:00Z",
+      "score": 23,
+      "duration_minutes": 7,
+      "quality": 87,
+      "notes": ""
+    },
+    {
+      "gameId": "apple_picking",
+      "date": "2025-01-12T19:06:20.602354+00:00Z",
+      "score": 25,
+      "duration_minutes": 10,
+      "quality": 59,
+      "notes": ""
+    }
+  ]
+}

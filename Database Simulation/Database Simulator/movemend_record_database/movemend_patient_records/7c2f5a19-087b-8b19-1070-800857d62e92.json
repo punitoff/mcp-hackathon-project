@@ -1,0 +1,70 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "7c2f5a19-087b-8b19-1070-800857d62e92",
+  "sessions": [
+    {
+      "gameId": "boxing",
+      "date": "2024-07-22T19:06:19.741861+00:00Z",
+      "score": 13,
+      "duration_minutes": 10,
+      "quality": 88,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2025-04-06T19:06:19.741879+00:00Z",
+      "score": 12,
+      "duration_minutes": 1,
+      "quality": 33,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2024-10-14T19:06:19.741883+00:00Z",
+      "score": 15,
+      "duration_minutes": 8,
+      "quality": 48,
+      "notes": ""
+    },
+    {
+      "gameId": "apple_picking",
+      "date": "2024-12-16T19:06:19.741886+00:00Z",
+      "score": 16,
+      "duration_minutes": 7,
+      "quality": 88,
+      "notes": ""
+    },
+    {
+      "gameId": "apple_picking",
+      "date": "2025-05-12T19:06:19.741889+00:00Z",
+      "score": 17,
+      "duration_minutes": 3,
+      "quality": 70,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2025-01-31T19:06:19.741892+00:00Z",
+      "score": 18,
+      "duration_minutes": 4,
+      "quality": 71,
+      "notes": ""
+    },
+    {
+      "gameId": "tomato_dodge",
+      "date": "2024-09-25T19:06:19.741895+00:00Z",
+      "score": 21,
+      "duration_minutes": 4,
+      "quality": 68,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2024-11-30T19:06:19.741898+00:00Z",
+      "score": 25,
+      "duration_minutes": 4,
+      "quality": 43,
+      "notes": ""
+    }
+  ]
+}

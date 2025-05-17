@@ -1,0 +1,46 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "d3787410-0c1e-0073-c4a4-7b95aa2ca78d",
+  "sessions": [
+    {
+      "gameId": "soccer",
+      "date": "2025-03-28T19:06:19.947095+00:00Z",
+      "score": 15,
+      "duration_minutes": 3,
+      "quality": 35,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2025-03-25T19:06:19.947113+00:00Z",
+      "score": 19,
+      "duration_minutes": 3,
+      "quality": 33,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2024-07-15T19:06:19.947117+00:00Z",
+      "score": 25,
+      "duration_minutes": 9,
+      "quality": 42,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-05-21T19:06:19.947120+00:00Z",
+      "score": 24,
+      "duration_minutes": 2,
+      "quality": 77,
+      "notes": ""
+    },
+    {
+      "gameId": "apple_picking",
+      "date": "2025-01-26T19:06:19.947124+00:00Z",
+      "score": 18,
+      "duration_minutes": 10,
+      "quality": 28,
+      "notes": ""
+    }
+  ]
+}

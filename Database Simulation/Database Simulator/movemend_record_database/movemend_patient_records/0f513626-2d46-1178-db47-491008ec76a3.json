@@ -1,0 +1,30 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "0f513626-2d46-1178-db47-491008ec76a3",
+  "sessions": [
+    {
+      "gameId": "skate",
+      "date": "2024-11-12T19:06:20.091151+00:00Z",
+      "score": 21,
+      "duration_minutes": 5,
+      "quality": 30,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2025-04-25T19:06:20.091185+00:00Z",
+      "score": 23,
+      "duration_minutes": 5,
+      "quality": 57,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-11-27T19:06:20.091189+00:00Z",
+      "score": 16,
+      "duration_minutes": 9,
+      "quality": 94,
+      "notes": ""
+    }
+  ]
+}

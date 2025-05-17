@@ -1,0 +1,22 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "95559bb7-a9a3-104c-a710-e9a1e22b312e",
+  "sessions": [
+    {
+      "gameId": "hot_potato",
+      "date": "2025-01-03T19:06:18.342954+00:00Z",
+      "score": 21,
+      "duration_minutes": 9,
+      "quality": 62,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2024-06-25T19:06:18.342976+00:00Z",
+      "score": 23,
+      "duration_minutes": 7,
+      "quality": 59,
+      "notes": ""
+    }
+  ]
+}

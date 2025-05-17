@@ -1,0 +1,30 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "c436b070-c8dd-a91c-904d-58818b55fcb8",
+  "sessions": [
+    {
+      "gameId": "berry_picking",
+      "date": "2025-03-08T19:06:18.255533+00:00Z",
+      "score": 24,
+      "duration_minutes": 3,
+      "quality": 81,
+      "notes": ""
+    },
+    {
+      "gameId": "tomato_dodge",
+      "date": "2024-10-24T19:06:18.255558+00:00Z",
+      "score": 12,
+      "duration_minutes": 5,
+      "quality": 50,
+      "notes": ""
+    },
+    {
+      "gameId": "tomato_dodge",
+      "date": "2024-08-03T19:06:18.255563+00:00Z",
+      "score": 16,
+      "duration_minutes": 10,
+      "quality": 50,
+      "notes": ""
+    }
+  ]
+}

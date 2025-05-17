@@ -1,0 +1,14 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "edf2d260-9a0b-7668-ed7b-259b11812e09",
+  "sessions": [
+    {
+      "gameId": "berry_picking",
+      "date": "2024-12-15T19:06:19.681397+00:00Z",
+      "score": 19,
+      "duration_minutes": 9,
+      "quality": 70,
+      "notes": ""
+    }
+  ]
+}

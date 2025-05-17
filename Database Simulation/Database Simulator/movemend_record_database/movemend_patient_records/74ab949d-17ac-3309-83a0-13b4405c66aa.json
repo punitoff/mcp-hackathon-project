@@ -1,0 +1,38 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "74ab949d-17ac-3309-83a0-13b4405c66aa",
+  "sessions": [
+    {
+      "gameId": "soccer",
+      "date": "2024-09-23T19:06:19.053438+00:00Z",
+      "score": 14,
+      "duration_minutes": 6,
+      "quality": 93,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2024-07-19T19:06:19.053454+00:00Z",
+      "score": 17,
+      "duration_minutes": 2,
+      "quality": 57,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2024-07-19T19:06:19.053459+00:00Z",
+      "score": 16,
+      "duration_minutes": 1,
+      "quality": 60,
+      "notes": ""
+    },
+    {
+      "gameId": "soccer",
+      "date": "2024-07-22T19:06:19.053463+00:00Z",
+      "score": 12,
+      "duration_minutes": 2,
+      "quality": 99,
+      "notes": ""
+    }
+  ]
+}

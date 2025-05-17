@@ -1,0 +1,54 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "5bc6b903-8fcd-c8ea-8be6-bf2351e1f78a",
+  "sessions": [
+    {
+      "gameId": "boxing",
+      "date": "2024-12-26T19:06:18.760775+00:00Z",
+      "score": 11,
+      "duration_minutes": 10,
+      "quality": 84,
+      "notes": ""
+    },
+    {
+      "gameId": "skate",
+      "date": "2024-11-11T19:06:18.760795+00:00Z",
+      "score": 24,
+      "duration_minutes": 9,
+      "quality": 25,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2024-09-02T19:06:18.760799+00:00Z",
+      "score": 16,
+      "duration_minutes": 9,
+      "quality": 88,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2024-11-26T19:06:18.760803+00:00Z",
+      "score": 15,
+      "duration_minutes": 7,
+      "quality": 61,
+      "notes": ""
+    },
+    {
+      "gameId": "apple_picking",
+      "date": "2024-11-01T19:06:18.760806+00:00Z",
+      "score": 16,
+      "duration_minutes": 1,
+      "quality": 89,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2024-07-22T19:06:18.760810+00:00Z",
+      "score": 21,
+      "duration_minutes": 5,
+      "quality": 85,
+      "notes": ""
+    }
+  ]
+}

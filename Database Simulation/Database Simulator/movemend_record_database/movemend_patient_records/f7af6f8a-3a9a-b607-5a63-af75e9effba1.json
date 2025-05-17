@@ -1,0 +1,14 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "f7af6f8a-3a9a-b607-5a63-af75e9effba1",
+  "sessions": [
+    {
+      "gameId": "apple_picking",
+      "date": "2024-08-20T19:06:20.472433+00:00Z",
+      "score": 11,
+      "duration_minutes": 5,
+      "quality": 91,
+      "notes": ""
+    }
+  ]
+}

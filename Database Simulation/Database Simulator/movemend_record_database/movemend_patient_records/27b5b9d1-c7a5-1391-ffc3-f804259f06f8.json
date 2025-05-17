@@ -1,0 +1,54 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "27b5b9d1-c7a5-1391-ffc3-f804259f06f8",
+  "sessions": [
+    {
+      "gameId": "boxing",
+      "date": "2024-07-22T19:06:18.404993+00:00Z",
+      "score": 11,
+      "duration_minutes": 10,
+      "quality": 58,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2024-10-11T19:06:18.405012+00:00Z",
+      "score": 16,
+      "duration_minutes": 7,
+      "quality": 86,
+      "notes": ""
+    },
+    {
+      "gameId": "gardening",
+      "date": "2024-08-30T19:06:18.405015+00:00Z",
+      "score": 21,
+      "duration_minutes": 9,
+      "quality": 53,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2024-12-18T19:06:18.405018+00:00Z",
+      "score": 15,
+      "duration_minutes": 5,
+      "quality": 37,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2024-10-24T19:06:18.405022+00:00Z",
+      "score": 16,
+      "duration_minutes": 1,
+      "quality": 82,
+      "notes": ""
+    },
+    {
+      "gameId": "soccer",
+      "date": "2024-05-26T19:06:18.405025+00:00Z",
+      "score": 21,
+      "duration_minutes": 8,
+      "quality": 70,
+      "notes": ""
+    }
+  ]
+}

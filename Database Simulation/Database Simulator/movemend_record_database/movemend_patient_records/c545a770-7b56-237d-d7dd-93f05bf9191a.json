@@ -1,0 +1,78 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "c545a770-7b56-237d-d7dd-93f05bf9191a",
+  "sessions": [
+    {
+      "gameId": "boxing",
+      "date": "2024-11-09T19:06:19.120781+00:00Z",
+      "score": 11,
+      "duration_minutes": 6,
+      "quality": 88,
+      "notes": ""
+    },
+    {
+      "gameId": "flying",
+      "date": "2025-01-01T19:06:19.120799+00:00Z",
+      "score": 10,
+      "duration_minutes": 6,
+      "quality": 83,
+      "notes": ""
+    },
+    {
+      "gameId": "gardening",
+      "date": "2024-07-15T19:06:19.120803+00:00Z",
+      "score": 22,
+      "duration_minutes": 4,
+      "quality": 88,
+      "notes": ""
+    },
+    {
+      "gameId": "skate",
+      "date": "2025-03-30T19:06:19.120806+00:00Z",
+      "score": 18,
+      "duration_minutes": 2,
+      "quality": 77,
+      "notes": ""
+    },
+    {
+      "gameId": "apple_picking",
+      "date": "2024-09-11T19:06:19.120809+00:00Z",
+      "score": 19,
+      "duration_minutes": 8,
+      "quality": 75,
+      "notes": ""
+    },
+    {
+      "gameId": "rowing",
+      "date": "2024-06-20T19:06:19.120812+00:00Z",
+      "score": 11,
+      "duration_minutes": 3,
+      "quality": 48,
+      "notes": ""
+    },
+    {
+      "gameId": "tomato_dodge",
+      "date": "2024-12-08T19:06:19.120815+00:00Z",
+      "score": 22,
+      "duration_minutes": 10,
+      "quality": 60,
+      "notes": ""
+    },
+    {
+      "gameId": "hot_potato",
+      "date": "2024-06-15T19:06:19.120818+00:00Z",
+      "score": 24,
+      "duration_minutes": 1,
+      "quality": 45,
+      "notes": ""
+    },
+    {
+      "gameId": "gardening",
+      "date": "2024-08-20T19:06:19.120821+00:00Z",
+      "score": 15,
+      "duration_minutes": 9,
+      "quality": 63,
+      "notes": ""
+    }
+  ]
+}

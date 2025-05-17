@@ -1,0 +1,46 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "f22b8da6-2fc7-3e44-c67e-5dfcdc95b328",
+  "sessions": [
+    {
+      "gameId": "skate",
+      "date": "2025-02-04T19:06:18.730405+00:00Z",
+      "score": 13,
+      "duration_minutes": 9,
+      "quality": 51,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2024-10-26T19:06:18.730423+00:00Z",
+      "score": 23,
+      "duration_minutes": 9,
+      "quality": 64,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2024-08-15T19:06:18.730427+00:00Z",
+      "score": 24,
+      "duration_minutes": 8,
+      "quality": 87,
+      "notes": ""
+    },
+    {
+      "gameId": "soccer",
+      "date": "2024-12-30T19:06:18.730430+00:00Z",
+      "score": 24,
+      "duration_minutes": 10,
+      "quality": 38,
+      "notes": ""
+    },
+    {
+      "gameId": "boxing",
+      "date": "2024-07-03T19:06:18.730433+00:00Z",
+      "score": 19,
+      "duration_minutes": 10,
+      "quality": 50,
+      "notes": ""
+    }
+  ]
+}

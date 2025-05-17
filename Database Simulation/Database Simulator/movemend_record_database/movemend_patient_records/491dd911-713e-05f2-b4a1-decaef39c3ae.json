@@ -1,0 +1,30 @@
+{
+  "resourceType": "MovemendRecord",
+  "id": "491dd911-713e-05f2-b4a1-decaef39c3ae",
+  "sessions": [
+    {
+      "gameId": "skate",
+      "date": "2024-09-23T19:06:20.415542+00:00Z",
+      "score": 15,
+      "duration_minutes": 4,
+      "quality": 37,
+      "notes": ""
+    },
+    {
+      "gameId": "apple_picking",
+      "date": "2025-01-06T19:06:20.415564+00:00Z",
+      "score": 25,
+      "duration_minutes": 1,
+      "quality": 67,
+      "notes": ""
+    },
+    {
+      "gameId": "berry_picking",
+      "date": "2024-06-27T19:06:20.415567+00:00Z",
+      "score": 19,
+      "duration_minutes": 1,
+      "quality": 67,
+      "notes": ""
+    }
+  ]
+}
