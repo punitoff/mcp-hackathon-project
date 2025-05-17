@@ -8,7 +8,7 @@ def ping_dbs():
         response.raise_for_status()  # Raises HTTPError for 4xx/5xx
         print(response.json())
     except requests.exceptions.RequestException as e:
-        print(f"Error retrieving patient list: {e}")
+        print(f"Error retrieving database id: {e}")
         return []
     
     base_url_2 = "http://127.0.0.1:8002"
@@ -18,7 +18,7 @@ def ping_dbs():
         response.raise_for_status()  # Raises HTTPError for 4xx/5xx
         print(response.json())
     except requests.exceptions.RequestException as e:
-        print(f"Error retrieving patient list: {e}")
+        print(f"Error retrieving database id: {e}")
         return []
 
 def get_random_patient_data(count: int):
@@ -47,7 +47,7 @@ def get_movemend_data(patient_id: str):
 
 if __name__ == "__main__":
     ping_dbs()
-    records = get_random_patient_data(5)
+    records = get_random_patient_data(25)
     records_json = records.json()
     for record in records_json:
         print(record["id"])
