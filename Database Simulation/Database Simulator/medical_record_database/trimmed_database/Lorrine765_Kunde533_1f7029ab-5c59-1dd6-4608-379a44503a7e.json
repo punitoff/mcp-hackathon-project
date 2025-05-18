@@ -1,0 +1,170 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:5c38d39a-fe12-570e-a778-fb2b6859111d",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "5c38d39a-fe12-570e-a778-fb2b6859111d",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2",
+              "display": "CBC panel - Blood by Automated count"
+            }
+          ],
+          "text": "CBC panel - Blood by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:1f7029ab-5c59-1dd6-4608-379a44503a7e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3854c260-2275-5749-cfd8-f47d626d6498"
+        },
+        "effectiveDateTime": "2024-03-21T20:40:14+00:00",
+        "issued": "2024-03-21T20:40:14.129+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|4ba48ef6-19f2-3177-bfaf-096daaebf26a",
+            "display": "SOUTH SHORE HEALTH CARE INC"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:0b7f74db-0d10-5843-bd54-3f0238a928d4",
+            "display": "Leukocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:b4a89aed-0c26-63b2-5dbc-37b5ae5937a7",
+            "display": "Erythrocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:0f77a0ae-161f-43bd-85f6-a6998b82790e",
+            "display": "Hemoglobin [Mass/volume] in Blood"
+          },
+          {
+            "reference": "urn:uuid:297b521a-ba3d-f849-e615-f328b1bf7062",
+            "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:e53773ae-8563-3008-cc94-c54996a6ba8e",
+            "display": "MCV [Entitic volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:23f51b21-527b-c240-0a75-ff96f200fea1",
+            "display": "MCH [Entitic mass] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:71b85d18-db50-d939-fc65-fa7443d670c8",
+            "display": "MCHC [Mass/volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:a1a7d049-ba58-505a-8042-61445d769c84",
+            "display": "Erythrocyte distribution width [Entitic volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:f55522b4-190f-7053-ac07-c91f7fcd4431",
+            "display": "Platelets [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:6e2cd7f1-10fa-a0ee-53ca-1ccb52d87341",
+            "display": "Platelet distribution width [Entitic volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:c1ed4fe5-ea63-ab5d-c8dc-dbed54ccb5b6",
+            "display": "Platelet mean volume [Entitic volume] in Blood by Automated count"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c7cbd169-5fa2-a75d-11b1-699968d88090",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "c7cbd169-5fa2-a75d-11b1-699968d88090",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "34117-2",
+                "display": "History and physical note"
+              },
+              {
+                "system": "http://loinc.org",
+                "code": "51847-2",
+                "display": "Evaluation + Plan note"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34117-2",
+              "display": "History and physical note"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "51847-2",
+              "display": "Evaluation + Plan note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1f7029ab-5c59-1dd6-4608-379a44503a7e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7858d3f4-a09a-4481-98e7-8b8370ee5d9d"
+        },
+        "effectiveDateTime": "2025-05-01T20:40:14+00:00",
+        "issued": "2025-05-01T20:40:14.129+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999990895",
+            "display": "Dr. Margaret865 Reinger292"
+          }
+        ],
+        "presentedForm": [
+          {
+            "contentType": "text/plain; charset=utf-8",
+            "data": "CjIwMjUtMDUtMDEKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gU2hvcnRuZXNzIG9mIEJyZWF0aAotIE11Y3VzCi0gU29yZSBUaHJvYXQKLSBGZXZlcgotIE5hc2FsIENvbmdlc3Rpb24KLSBCb2R5IEFjaGVzCgoKIyBIaXN0b3J5IG9mIFByZXNlbnQgSWxsbmVzcwpMb3JyaW5lNzY1CiBpcyBhIDEgeWVhci1vbGQgbm9uaGlzcGFuaWMgd2hpdGUgZmVtYWxlLiBQYXRpZW50IGhhcyBhIGhpc3Rvcnkgb2YgbWVkaWNhdGlvbiByZXZpZXcgZHVlIChzaXR1YXRpb24pLgoKIyBTb2NpYWwgSGlzdG9yeQogUGF0aWVudCBoYXMgbmV2ZXIgc21va2VkLgoKClBhdGllbnQgY29tZXMgZnJvbSBhIGhpZ2ggc29jaW9lY29ub21pYyBiYWNrZ3JvdW5kLgoKUGF0aWVudCBjdXJyZW50bHkgaGFzIEh1bWFuYS4KCiMgQWxsZXJnaWVzCk5vIEtub3duIEFsbGVyZ2llcy4KCiMgTWVkaWNhdGlvbnMKTm8gQWN0aXZlIE1lZGljYXRpb25zLgoKIyBBc3Nlc3NtZW50IGFuZCBQbGFuCgoKCiMjIFBsYW4KCg=="
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    }
+  ]
+}

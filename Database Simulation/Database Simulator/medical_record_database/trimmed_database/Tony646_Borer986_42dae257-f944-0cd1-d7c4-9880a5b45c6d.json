@@ -1,0 +1,1054 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:56551d45-42df-e21d-23c4-d813571ac81b",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "56551d45-42df-e21d-23c4-d813571ac81b",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "34117-2",
+                "display": "History and physical note"
+              },
+              {
+                "system": "http://loinc.org",
+                "code": "51847-2",
+                "display": "Evaluation + Plan note"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34117-2",
+              "display": "History and physical note"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "51847-2",
+              "display": "Evaluation + Plan note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:fd7ecafd-d4ec-7159-7bf0-da4ff82dd40f"
+        },
+        "effectiveDateTime": "2024-08-30T12:15:47+00:00",
+        "issued": "2024-08-30T12:15:47.837+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999970194",
+            "display": "Dr. Josephine273 Collier206"
+          }
+        ],
+        "presentedForm": [
+          {
+            "contentType": "text/plain; charset=utf-8",
+            "data": "CjIwMjQtMDgtMzAKCiMgQ2hpZWYgQ29tcGxhaW50Ck5vIGNvbXBsYWludHMuCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzClRvbnk2NDYKIGlzIGEgNzggeWVhci1vbGQgbm9uaGlzcGFuaWMgd2hpdGUgbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIGdpbmdpdmFsIGRpc2Vhc2UgKGRpc29yZGVyKSwgbWVkaWNhdGlvbiByZXZpZXcgZHVlIChzaXR1YXRpb24pLCB1bmVtcGxveWVkIChmaW5kaW5nKSwgYWN1dGUgdmlyYWwgcGhhcnluZ2l0aXMgKGRpc29yZGVyKSwgZnJhY3R1cmUgb2YgYm9uZSAoZGlzb3JkZXIpLCB2aWN0aW0gb2YgaW50aW1hdGUgcGFydG5lciBhYnVzZSAoZmluZGluZyksIGZyYWN0dXJlIHN1Ymx1eGF0aW9uIG9mIHdyaXN0IChkaXNvcmRlciksIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgbGltaXRlZCBzb2NpYWwgY29udGFjdCAoZmluZGluZyksIG5vdCBpbiBsYWJvciBmb3JjZSAoZmluZGluZyksIHJlcG9ydHMgb2YgdmlvbGVuY2UgaW4gdGhlIGVudmlyb25tZW50IChmaW5kaW5nKSwgZnVsbC10aW1lIGVtcGxveW1lbnQgKGZpbmRpbmcpLCBnaW5naXZpdGlzIChkaXNvcmRlciksIHN0cmVzcyAoZmluZGluZykuCgojIFNvY2lhbCBIaXN0b3J5ClBhdGllbnQgaXMgbWFycmllZC4gUGF0aWVudCBoYXMgbmV2ZXIgc21va2VkLgogUGF0aWVudCBpZGVudGlmaWVzIGFzIGhldGVyb3NleHVhbC4KClBhdGllbnQgY29tZXMgZnJvbSBhIGhpZ2ggc29jaW9lY29ub21pYyBiYWNrZ3JvdW5kLgogUGF0aWVudCBoYXMgYSBoaWdoIHNjaG9vbCBlZHVjYXRpb24uClBhdGllbnQgY3VycmVudGx5IGhhcyBNZWRpY2FyZS4KCiMgQWxsZXJnaWVzCk5vIEtub3duIEFsbGVyZ2llcy4KCiMgTWVkaWNhdGlvbnMKYWNldGFtaW5vcGhlbiAzMjUgbWcgb3JhbCB0YWJsZXQ7IDEwMCBtbCBwcm9wb2ZvbCAxMCBtZy9tbCBpbmplY3Rpb247IHJvY3Vyb25pdW0gYnJvbWlkZSAxMCBtZy9tbCBpbmplY3RhYmxlIHNvbHV0aW9uOyAxIG1sIGhlcGFyaW4gc29kaXVtLCBwb3JjaW5lIDUwMDAgdW50L21sIGluamVjdGlvbjsgMjUgbWwgcHJvdGFtaW5lIHN1bGZhdGUgKHVzcCkgMTAgbWcvbWwgaW5qZWN0aW9uOyAyIG1sIG9uZGFuc2V0cm9uIDIgbWcvbWwgaW5qZWN0aW9uOyBpc29mbHVyYW5lIDk5LjkgJSBpbmhhbGF0aW9uIHNvbHV0aW9uOyBjZWZhem9saW4gMjAwMCBtZyBpbmplY3Rpb247IDUgbWwgc3VmZW50YW5pbCAwLjA1IG1nL21sIGluamVjdGlvbjsgbG9yYXplcGFtIDIgbWcvbWwgaW5qZWN0YWJsZSBzb2x1dGlvbjsgc29kaXVtIGZsdW9yaWRlIDAuMDI3MiBtZy9tZyBvcmFsIGdlbAoKIyBBc3Nlc3NtZW50IGFuZCBQbGFuClBhdGllbnQgaXMgcHJlc2VudGluZyB3aXRoIG1lZGljYXRpb24gcmV2aWV3IGR1ZSAoc2l0dWF0aW9uKSwgcGFydC10aW1lIGVtcGxveW1lbnQgKGZpbmRpbmcpLiAKCgojIyBQbGFuClBhdGllbnQgd2FzIGdpdmVuIHRoZSBmb2xsb3dpbmcgaW1tdW5pemF0aW9uczogaW5mbHVlbnphLCBzZWFzb25hbCwgaW5qZWN0YWJsZSwgcHJlc2VydmF0aXZlIGZyZWUuIApUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gYXNzZXNzbWVudCBvZiBoZWFsdGggYW5kIHNvY2lhbCBjYXJlIG5lZWRzIChwcm9jZWR1cmUpCi0gYXNzZXNzbWVudCB1c2luZyBtb3JzZSBmYWxsIHNjYWxlIChwcm9jZWR1cmUpCi0gc2NyZWVuaW5nIGZvciBkb21lc3RpYyBhYnVzZSAocHJvY2VkdXJlKQotIGRlcHJlc3Npb24gc2NyZWVuaW5nIChwcm9jZWR1cmUpCi0gZGVwcmVzc2lvbiBzY3JlZW5pbmcgKHByb2NlZHVyZSkKLSBhc3Nlc3NtZW50IG9mIHN1YnN0YW5jZSB1c2UgKHByb2NlZHVyZSkKLSBzY3JlZW5pbmcgZm9yIGRydWcgYWJ1c2UgKHByb2NlZHVyZSkK"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d3ae37dc-d37f-97b3-49b4-bc304264dbfa",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "d3ae37dc-d37f-97b3-49b4-bc304264dbfa",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "51990-0",
+              "display": "Basic metabolic panel - Blood"
+            }
+          ],
+          "text": "Basic metabolic panel - Blood"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:fd7ecafd-d4ec-7159-7bf0-da4ff82dd40f"
+        },
+        "effectiveDateTime": "2024-08-30T12:15:47+00:00",
+        "issued": "2024-08-30T12:15:47.837+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|31e00f85-6909-3d9f-afc6-5ae507ab0c06",
+            "display": "BRAINTREE FAMILY PHYSICIAN INC"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:0772c8c3-911e-92f0-18dd-83811a66110f",
+            "display": "Glucose [Mass/volume] in Blood"
+          },
+          {
+            "reference": "urn:uuid:f6ae4318-c08a-b495-d7c1-649414bdd3c6",
+            "display": "Urea nitrogen [Mass/volume] in Blood"
+          },
+          {
+            "reference": "urn:uuid:59f652ee-cf72-a162-c84a-3a62e77028c1",
+            "display": "Creatinine [Mass/volume] in Blood"
+          },
+          {
+            "reference": "urn:uuid:e6e871da-eff6-af60-6d80-3534afb0456c",
+            "display": "Calcium [Mass/volume] in Blood"
+          },
+          {
+            "reference": "urn:uuid:f390af3f-75ad-7e11-3338-f09648cc299c",
+            "display": "Sodium [Moles/volume] in Blood"
+          },
+          {
+            "reference": "urn:uuid:f7c4d8ca-a18a-cea4-0d90-397c95cd54e3",
+            "display": "Potassium [Moles/volume] in Blood"
+          },
+          {
+            "reference": "urn:uuid:4aeb2747-2b5f-2b64-aba4-92b13edefd26",
+            "display": "Chloride [Moles/volume] in Blood"
+          },
+          {
+            "reference": "urn:uuid:45f8738e-7666-1272-086d-1b6760c89a6d",
+            "display": "Carbon dioxide, total [Moles/volume] in Blood"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b463081b-5871-9b34-2e4e-8d5ad8d1474e",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "b463081b-5871-9b34-2e4e-8d5ad8d1474e",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "69737-5",
+              "display": "Generalized anxiety disorder 7 item (GAD-7)"
+            }
+          ],
+          "text": "Generalized anxiety disorder 7 item (GAD-7)"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d0105652-6665-919f-5230-3d32100da02b"
+        },
+        "effectiveDateTime": "2022-08-19T13:31:58+00:00",
+        "issued": "2022-08-19T13:31:58.837+00:00",
+        "result": [
+          {
+            "reference": "urn:uuid:e2ca163d-f16a-31b9-e3dc-114c7e56309b",
+            "display": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a2da0fdb-075b-9f96-101e-cf3b07d651ae",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "a2da0fdb-075b-9f96-101e-cf3b07d651ae",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59453-1",
+              "display": "Morse Fall Scale panel"
+            }
+          ],
+          "text": "Morse Fall Scale panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:fd7ecafd-d4ec-7159-7bf0-da4ff82dd40f"
+        },
+        "effectiveDateTime": "2024-08-30T13:20:21+00:00",
+        "issued": "2024-08-30T13:20:21.837+00:00",
+        "result": [
+          {
+            "reference": "urn:uuid:9a26a736-81a4-53c3-f656-1ad527a9ccbc",
+            "display": "Fall risk total [Morse Fall Scale]"
+          },
+          {
+            "reference": "urn:uuid:9156a639-f08f-be22-28ce-9900648f3ec8",
+            "display": "Fall risk level [Morse Fall Scale]"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:df3a8970-ae07-06c4-900b-0034ad9a021f",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "df3a8970-ae07-06c4-900b-0034ad9a021f",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55757-9",
+              "display": "Patient Health Questionnaire 2 item (PHQ-2) [Reported]"
+            }
+          ],
+          "text": "Patient Health Questionnaire 2 item (PHQ-2) [Reported]"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:fd7ecafd-d4ec-7159-7bf0-da4ff82dd40f"
+        },
+        "effectiveDateTime": "2024-08-30T14:22:54+00:00",
+        "issued": "2024-08-30T14:22:54.837+00:00",
+        "result": [
+          {
+            "reference": "urn:uuid:5a704402-92e6-b822-3c4e-5207ab51ba1e",
+            "display": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4933157e-9fdc-61c1-fc1f-e6b258855ece",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "4933157e-9fdc-61c1-fc1f-e6b258855ece",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "82666-9",
+              "display": "Drug Abuse Screening Test-10 [DAST-10]"
+            }
+          ],
+          "text": "Drug Abuse Screening Test-10 [DAST-10]"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:fd7ecafd-d4ec-7159-7bf0-da4ff82dd40f"
+        },
+        "effectiveDateTime": "2024-08-30T14:56:55+00:00",
+        "issued": "2024-08-30T14:56:55.837+00:00",
+        "result": [
+          {
+            "reference": "urn:uuid:5181ccb5-9a26-8bcf-bb77-e4f8a22e2a67",
+            "display": "Total score [DAST-10]"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:75ad7cdc-2f7d-eefe-c5ff-0e502b20f5f1",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "75ad7cdc-2f7d-eefe-c5ff-0e502b20f5f1",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "76499-3",
+              "display": "Humiliation, Afraid, Rape, and Kick questionnaire [HARK]"
+            }
+          ],
+          "text": "Humiliation, Afraid, Rape, and Kick questionnaire [HARK]"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:fd7ecafd-d4ec-7159-7bf0-da4ff82dd40f"
+        },
+        "effectiveDateTime": "2024-08-30T13:45:48+00:00",
+        "issued": "2024-08-30T13:45:48.837+00:00",
+        "result": [
+          {
+            "reference": "urn:uuid:67d73918-0d81-b6ab-d0c5-a46ff78a67bf",
+            "display": "Total score [HARK]"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0b6972a1-9b1b-4c8a-3ffb-9465eae92834",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "0b6972a1-9b1b-4c8a-3ffb-9465eae92834",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72109-2",
+              "display": "Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]"
+            }
+          ],
+          "text": "Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:1e824127-f814-3efd-95e3-96e853690ac2"
+        },
+        "effectiveDateTime": "2019-08-02T14:32:46+00:00",
+        "issued": "2019-08-02T14:32:46.837+00:00",
+        "result": [
+          {
+            "reference": "urn:uuid:7d0aabb6-d869-2771-9849-f424bd4ff74e",
+            "display": "Total score [AUDIT-C]"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d5941e17-83ec-9be9-f761-3a1fcf017c8f",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "d5941e17-83ec-9be9-f761-3a1fcf017c8f",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2",
+              "display": "CBC panel - Blood by Automated count"
+            }
+          ],
+          "text": "CBC panel - Blood by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:9aeb94bc-7250-f07b-ea72-c5403f25b858"
+        },
+        "effectiveDateTime": "2023-08-25T12:15:47+00:00",
+        "issued": "2023-08-25T12:15:47.837+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|31e00f85-6909-3d9f-afc6-5ae507ab0c06",
+            "display": "BRAINTREE FAMILY PHYSICIAN INC"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:2ad1c8ad-5695-363b-fe77-cc681c42217f",
+            "display": "Leukocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:fa4f49d8-685c-af61-91db-86cffe8e6d9b",
+            "display": "Erythrocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:ba5343c4-6a46-11f1-c1b7-b3f709a2a528",
+            "display": "Hemoglobin [Mass/volume] in Blood"
+          },
+          {
+            "reference": "urn:uuid:da34312b-5f76-3143-6834-fb749bc2a98f",
+            "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:9c4c24d5-2488-b4a3-7b3d-6f6d3a786d7c",
+            "display": "MCV [Entitic volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:07f4fa47-e29a-e241-b817-5e401fe26660",
+            "display": "MCH [Entitic mass] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:fb3877f8-a98d-bdbc-6d1d-65c4975794f6",
+            "display": "MCHC [Mass/volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:e7011ee3-b68f-8547-9fe3-43aeda63548d",
+            "display": "Erythrocyte distribution width [Entitic volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:be10448c-b367-00a4-eb0e-c1e229d2630a",
+            "display": "Platelets [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:57c8ebd4-15bc-3b5d-dec6-e6ee7b41c3d8",
+            "display": "Platelet distribution width [Entitic volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:b8d4ee2f-33ac-380b-58b2-11e88487ce4a",
+            "display": "Platelet mean volume [Entitic volume] in Blood by Automated count"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cbb33c8d-447a-b06d-c6e7-e1e7dbbc964f",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "cbb33c8d-447a-b06d-c6e7-e1e7dbbc964f",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24323-8",
+              "display": "Comprehensive metabolic 2000 panel - Serum or Plasma"
+            }
+          ],
+          "text": "Comprehensive metabolic 2000 panel - Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:351c71d4-7961-de05-22e9-7527f32d6445"
+        },
+        "effectiveDateTime": "2016-08-16T02:45:27+00:00",
+        "issued": "2016-08-16T02:45:27.837+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|74ab949d-17ac-3309-83a0-13b4405c66aa",
+            "display": "Fitchburg Outpatient Clinic"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:ce293d47-52b1-6574-0d8f-c5f6aee68afb",
+            "display": "Glucose [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:9b8a266f-90e4-8d58-bdc8-093a863043b1",
+            "display": "Urea nitrogen [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:c07fb4b8-0eca-af8e-12d0-f86abef65b05",
+            "display": "Creatinine [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:192ba1cc-5ef1-e4da-7dcf-dbb0acb7536a",
+            "display": "Calcium [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:e33d3f7f-af6a-c269-5dd8-ed850062069a",
+            "display": "Sodium [Moles/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:b34cbbda-8d08-0064-cc92-cdc6a50f1f5e",
+            "display": "Potassium [Moles/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:d6abee74-8169-094f-9fe2-556d22dbe132",
+            "display": "Chloride [Moles/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:2ea4d849-42de-df46-c70b-4c6efe40d928",
+            "display": "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:4f520b04-9ba8-390c-789a-984a4a55063b",
+            "display": "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)"
+          },
+          {
+            "reference": "urn:uuid:2d9b375d-d86c-1c66-b73c-26e4da085a08",
+            "display": "Protein [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:b2965e17-7bcd-ca20-e0e7-fb026be11bb6",
+            "display": "Albumin [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:53a4c074-c393-b51f-ba28-0f4cb003b57a",
+            "display": "Bilirubin.total [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:95110758-c577-0e26-8101-872aeefc99d7",
+            "display": "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:5867d874-7a97-0c89-e381-d81e457411bf",
+            "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:d7f230e7-6029-3449-f7bc-2ee9532c14c1",
+            "display": "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:182a0842-642c-6767-4fc2-f48b763efe3b",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "182a0842-642c-6767-4fc2-f48b763efe3b",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34528-0",
+              "display": "PT panel - Platelet poor plasma by Coagulation assay"
+            }
+          ],
+          "text": "PT panel - Platelet poor plasma by Coagulation assay"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:351c71d4-7961-de05-22e9-7527f32d6445"
+        },
+        "effectiveDateTime": "2016-08-16T02:45:27+00:00",
+        "issued": "2016-08-16T02:45:27.837+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|74ab949d-17ac-3309-83a0-13b4405c66aa",
+            "display": "Fitchburg Outpatient Clinic"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:7ffb6f1c-0d5f-e88b-5003-40ca981fd9c1",
+            "display": "Prothrombin time (PT)"
+          },
+          {
+            "reference": "urn:uuid:89543160-2e6f-ceee-6aaa-db52fc3beaba",
+            "display": "INR in Platelet poor plasma by Coagulation assay"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ee8f8d4b-e098-ffe2-993e-1ea2216d5bbe",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "ee8f8d4b-e098-ffe2-993e-1ea2216d5bbe",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24336-0",
+              "display": "Gas panel - Arterial blood"
+            }
+          ],
+          "text": "Gas panel - Arterial blood"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:351c71d4-7961-de05-22e9-7527f32d6445"
+        },
+        "effectiveDateTime": "2016-08-16T02:45:27+00:00",
+        "issued": "2016-08-16T02:45:27.837+00:00",
+        "result": [
+          {
+            "reference": "urn:uuid:104ab4be-7902-461e-e8f8-cf4ed6c97f40",
+            "display": "pH of Arterial blood"
+          },
+          {
+            "reference": "urn:uuid:96832b1d-88f5-b2c4-5886-e3afc6cbeb9a",
+            "display": "Carbon dioxide [Partial pressure] in Arterial blood"
+          },
+          {
+            "reference": "urn:uuid:e85f71bd-8a87-5afb-9ea3-d87ac8c78a46",
+            "display": "Oxygen [Partial pressure] in Arterial blood"
+          },
+          {
+            "reference": "urn:uuid:de3dc5ff-eb15-f7a5-a32c-c45064c5e720",
+            "display": "Bicarbonate [Moles/volume] in Arterial blood"
+          },
+          {
+            "reference": "urn:uuid:dbfcbe06-37ff-877b-b019-b34dff24f374",
+            "display": "Oxygen saturation in Arterial blood"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9f669dd6-1760-5f1c-caa0-894050f54ac1",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "9f669dd6-1760-5f1c-caa0-894050f54ac1",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "57698-3",
+              "display": "Lipid panel with direct LDL - Serum or Plasma"
+            }
+          ],
+          "text": "Lipid panel with direct LDL - Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:9aeb94bc-7250-f07b-ea72-c5403f25b858"
+        },
+        "effectiveDateTime": "2023-08-25T12:15:47+00:00",
+        "issued": "2023-08-25T12:15:47.837+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|31e00f85-6909-3d9f-afc6-5ae507ab0c06",
+            "display": "BRAINTREE FAMILY PHYSICIAN INC"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:7d05bd2b-58dd-4bc5-dc56-f7b6541e1403",
+            "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:768c9750-6196-03f9-8340-bf2c812a19a7",
+            "display": "Triglycerides"
+          },
+          {
+            "reference": "urn:uuid:515b19ee-7f89-e93a-f5e5-9501dc3ff504",
+            "display": "Low Density Lipoprotein Cholesterol"
+          },
+          {
+            "reference": "urn:uuid:484b1b8e-c611-4f0f-18eb-50e82722b7bf",
+            "display": "Cholesterol in HDL [Mass/volume] in Serum or Plasma"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5b5ebd6e-8194-e911-b9a4-3672f30a9bc3",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "5b5ebd6e-8194-e911-b9a4-3672f30a9bc3",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "89577-1",
+              "display": "Troponin I.cardiac panel - Serum or Plasma by High sensitivity method"
+            }
+          ],
+          "text": "Troponin I.cardiac panel - Serum or Plasma by High sensitivity method"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:fb3f17e3-c75f-807e-d1c4-28a74ddc0575"
+        },
+        "effectiveDateTime": "2016-08-12T12:54:11+00:00",
+        "issued": "2016-08-12T12:54:11.837+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|74ab949d-17ac-3309-83a0-13b4405c66aa",
+            "display": "Fitchburg Outpatient Clinic"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:6d74bf09-3a61-8c99-a57e-cff7a4dd60f2",
+            "display": "Troponin I.cardiac [Mass/volume] in Serum or Plasma by High sensitivity method"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f0645a98-45ef-2edd-95fd-bae7aa9cbdf7",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "f0645a98-45ef-2edd-95fd-bae7aa9cbdf7",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24356-8",
+              "display": "Urinalysis complete panel - Urine"
+            }
+          ],
+          "text": "Urinalysis complete panel - Urine"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:fb3f17e3-c75f-807e-d1c4-28a74ddc0575"
+        },
+        "effectiveDateTime": "2016-08-12T12:54:11+00:00",
+        "issued": "2016-08-12T12:54:11.837+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|74ab949d-17ac-3309-83a0-13b4405c66aa",
+            "display": "Fitchburg Outpatient Clinic"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:56f4de1b-6aab-0b95-5bf0-a724e1572a89",
+            "display": "Glucose [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:48b019e5-7bbc-79ee-665d-4a13254a3b22",
+            "display": "Bilirubin.total [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:e0caa222-1ed3-512d-50a5-018e901e2581",
+            "display": "Ketones [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:f702cdc4-8e00-ecd1-3513-d388f0e1785a",
+            "display": "Specific gravity of Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:111619dd-163c-fff5-bdbd-15dcf80040d1",
+            "display": "pH of Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:23dd691f-f153-bad7-ba6c-83da9553490a",
+            "display": "Protein [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:cab1adcf-b8e0-5a46-b174-9bb418a9e80c",
+            "display": "Nitrite [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:8d5aa8e7-9810-c382-ebb0-ca0f9429268d",
+            "display": "Hemoglobin [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:c5e5f450-b8c6-2d29-3dd3-ce375b081b6d",
+            "display": "Leukocyte esterase [Presence] in Urine by Test strip"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3f7b7cdb-fc36-d321-7cdf-bfd2ed34e795",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "3f7b7cdb-fc36-d321-7cdf-bfd2ed34e795",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55405-5",
+              "display": "Heart failure tracking panel"
+            }
+          ],
+          "text": "Heart failure tracking panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:fb3f17e3-c75f-807e-d1c4-28a74ddc0575"
+        },
+        "effectiveDateTime": "2016-08-12T13:02:06+00:00",
+        "issued": "2016-08-12T13:02:06.837+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|74ab949d-17ac-3309-83a0-13b4405c66aa",
+            "display": "Fitchburg Outpatient Clinic"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:319052bb-33c2-b461-729e-da1f5803886a",
+            "display": "Left ventricular Ejection fraction"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8b8e64e8-a4c5-9daf-7623-dbe42aa60913",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "8b8e64e8-a4c5-9daf-7623-dbe42aa60913",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24339-4",
+              "display": "Gas panel - Venous blood"
+            }
+          ],
+          "text": "Gas panel - Venous blood"
+        },
+        "subject": {
+          "reference": "urn:uuid:42dae257-f944-0cd1-d7c4-9880a5b45c6d"
+        },
+        "encounter": {
+          "reference": "urn:uuid:b6eb56c7-5e4e-5c45-53c3-3863ad6a10d9"
+        },
+        "effectiveDateTime": "2016-08-14T07:02:06+00:00",
+        "issued": "2016-08-14T07:02:06.837+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|74ab949d-17ac-3309-83a0-13b4405c66aa",
+            "display": "Fitchburg Outpatient Clinic"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:ac6c8eac-62e8-6b67-fd59-e15729553136",
+            "display": "pH of Venous blood"
+          },
+          {
+            "reference": "urn:uuid:e35fb3c0-d620-e721-47f6-9c1de3564f6e",
+            "display": "Carbon dioxide [Partial pressure] in Venous blood"
+          },
+          {
+            "reference": "urn:uuid:a7e77b01-e2dc-0496-6ba4-159bb24e246d",
+            "display": "Oxygen [Partial pressure] in Venous blood"
+          },
+          {
+            "reference": "urn:uuid:38158fdb-c01f-0724-f61f-b0276aae7f2c",
+            "display": "Bicarbonate [Moles/volume] in Venous blood"
+          },
+          {
+            "reference": "urn:uuid:4edbbffe-e5dc-217d-408c-fef054b44172",
+            "display": "Carbon dioxide, total [Moles/volume] in Venous blood"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    }
+  ]
+}

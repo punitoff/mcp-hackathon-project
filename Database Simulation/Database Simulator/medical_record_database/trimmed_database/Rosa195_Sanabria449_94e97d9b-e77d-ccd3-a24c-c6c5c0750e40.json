@@ -1,0 +1,170 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:ea01d741-742a-272e-02f3-32a954ccf409",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "ea01d741-742a-272e-02f3-32a954ccf409",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "34117-2",
+                "display": "History and physical note"
+              },
+              {
+                "system": "http://loinc.org",
+                "code": "51847-2",
+                "display": "Evaluation + Plan note"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34117-2",
+              "display": "History and physical note"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "51847-2",
+              "display": "Evaluation + Plan note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:94e97d9b-e77d-ccd3-a24c-c6c5c0750e40"
+        },
+        "encounter": {
+          "reference": "urn:uuid:a6afa280-8bc0-9e96-a16f-b6f679c3aafa"
+        },
+        "effectiveDateTime": "2025-04-29T11:49:58+00:00",
+        "issued": "2025-04-29T11:49:58.520+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999987297",
+            "display": "Dr. Madelaine318 Walker122"
+          }
+        ],
+        "presentedForm": [
+          {
+            "contentType": "text/plain; charset=utf-8",
+            "data": "CjIwMjUtMDQtMjkKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gSXRjaGluZwotIENoZXN0IFByZXNzdXJlCi0gTmFzYWwgQ29uZ2VzdGlvbgoKCiMgSGlzdG9yeSBvZiBQcmVzZW50IElsbG5lc3MKUm9zYTE5NQogaXMgYSAxMSB5ZWFyLW9sZCBoaXNwYW5pYyB3aGl0ZSBmZW1hbGUuIFBhdGllbnQgaGFzIGEgaGlzdG9yeSBvZiBzdHJlcHRvY29jY2FsIHNvcmUgdGhyb2F0IChkaXNvcmRlciksIG1lZGljYXRpb24gcmV2aWV3IGR1ZSAoc2l0dWF0aW9uKSwgcHJpbWFyeSBkZW50YWwgY2FyaWVzIChkaXNvcmRlciksIHZpcmFsIHNpbnVzaXRpcyAoZGlzb3JkZXIpLCBvdGl0aXMgbWVkaWEgKGRpc29yZGVyKSwgZ2luZ2l2aXRpcyAoZGlzb3JkZXIpLCBsb29zZSBkZW50YWwgZmlsbGluZyAoZmluZGluZykuCgojIFNvY2lhbCBIaXN0b3J5CiBQYXRpZW50IGhhcyBuZXZlciBzbW9rZWQuCgoKUGF0aWVudCBjb21lcyBmcm9tIGEgaGlnaCBzb2Npb2Vjb25vbWljIGJhY2tncm91bmQuCgpQYXRpZW50IGN1cnJlbnRseSBoYXMgTWVkaWNhcmUuCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCnBlbmljaWxsaW4gdiBwb3Rhc3NpdW0gMjUwIG1nIG9yYWwgdGFibGV0OyBoeWRyb2NvcnRpc29uZSAxMCBtZy9tbCB0b3BpY2FsIGNyZWFtOyBhbW94aWNpbGxpbiA1MDAgbWcgb3JhbCB0YWJsZXQ7IGNlZnVyb3hpbWUgMjUwIG1nIG9yYWwgdGFibGV0OyBicmVhdGgtYWN0dWF0ZWQgMTIwIGFjdHVhdCBiZWNsb21ldGhhc29uZSBkaXByb3Bpb25hdGUgMC4wNCBtZy9hY3R1YXQgbWV0ZXJlZCBkb3NlIGluaGFsZXIgW3F2YXJdOyBpYnVwcm9mZW4gMTAwIG1nIG9yYWwgdGFibGV0OyBhbGJ1dGVyb2wgMC4yMSBtZy9tbCBpbmhhbGF0aW9uIHNvbHV0aW9uOyBhY2V0YW1pbm9waGVuIDE2MCBtZyBjaGV3YWJsZSB0YWJsZXQ7IHNvZGl1bSBmbHVvcmlkZSAwLjAyNzIgbWcvbWcgb3JhbCBnZWwKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgoKCgojIyBQbGFuCgo="
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:873e613b-5226-7104-8fe5-e6c80604ff75",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "873e613b-5226-7104-8fe5-e6c80604ff75",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2",
+              "display": "CBC panel - Blood by Automated count"
+            }
+          ],
+          "text": "CBC panel - Blood by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:94e97d9b-e77d-ccd3-a24c-c6c5c0750e40"
+        },
+        "encounter": {
+          "reference": "urn:uuid:83ea279e-658a-e6f4-c7bb-46b1eac5f73d"
+        },
+        "effectiveDateTime": "2024-08-12T05:49:58+00:00",
+        "issued": "2024-08-12T05:49:58.520+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|357e489c-304e-3495-8354-62e85b5896b5",
+            "display": "NORTH SHORE PREVENTIVE HEALTH CARE PC"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:aca28e11-9fc7-be57-f581-dbcd4114fe90",
+            "display": "Leukocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:8b9d5f02-c9cb-5dfe-5ad0-eb0f5dbbc170",
+            "display": "Erythrocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:d13724c3-e81e-469f-1634-cddd32ad0bf5",
+            "display": "Hemoglobin [Mass/volume] in Blood"
+          },
+          {
+            "reference": "urn:uuid:e45a19ac-ebe5-3c6e-2d64-aa793d78e56e",
+            "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:e0ed8285-c1f8-95c1-59da-e414a3ff2ad5",
+            "display": "MCV [Entitic volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:d427519b-d109-6c16-4623-9b0e71fec08c",
+            "display": "MCH [Entitic mass] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:b1f9fc4b-0b14-33fe-7614-ee1c84493d47",
+            "display": "MCHC [Mass/volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:d9aa970f-07d6-0c96-faac-dd21971f0c8d",
+            "display": "Erythrocyte distribution width [Entitic volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:360d6c39-908b-5255-f462-68894f19d453",
+            "display": "Platelets [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:60325fd9-5767-6254-36b5-7083dcd04c9d",
+            "display": "Platelet distribution width [Entitic volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:5f569f79-f925-d260-ca81-7d86f45b012e",
+            "display": "Platelet mean volume [Entitic volume] in Blood by Automated count"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    }
+  ]
+}

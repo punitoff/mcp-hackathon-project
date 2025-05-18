@@ -1,0 +1,530 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:5a7ce22e-9cce-718a-a272-51e293914370",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "5a7ce22e-9cce-718a-a272-51e293914370",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "34117-2",
+                "display": "History and physical note"
+              },
+              {
+                "system": "http://loinc.org",
+                "code": "51847-2",
+                "display": "Evaluation + Plan note"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34117-2",
+              "display": "History and physical note"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "51847-2",
+              "display": "Evaluation + Plan note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1f2aa6c9-41bd-aa05-9da3-e557d8949816"
+        },
+        "encounter": {
+          "reference": "urn:uuid:bccfaec4-1611-9368-d00c-1787e9f2bfe6"
+        },
+        "effectiveDateTime": "2025-05-06T13:45:44+00:00",
+        "issued": "2025-05-06T13:45:44.849+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999990895",
+            "display": "Dr. Margaret865 Reinger292"
+          }
+        ],
+        "presentedForm": [
+          {
+            "contentType": "text/plain; charset=utf-8",
+            "data": "CjIwMjUtMDUtMDYKCiMgQ2hpZWYgQ29tcGxhaW50Ci0gQ2hlc3QgUHJlc3N1cmUKLSBOYXNhbCBDb25nZXN0aW9uCgoKIyBIaXN0b3J5IG9mIFByZXNlbnQgSWxsbmVzcwpLaXR0aWU2NzggU2lncmlkNjc2CiBpcyBhIDMyIHllYXItb2xkIG5vbmhpc3BhbmljIHdoaXRlIGZlbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIHN0cmVwdG9jb2NjYWwgc29yZSB0aHJvYXQgKGRpc29yZGVyKSwgZWNsYW1wc2lhIGluIHByZWduYW5jeSAoZGlzb3JkZXIpLCBtZWRpY2F0aW9uIHJldmlldyBkdWUgKHNpdHVhdGlvbiksIG1pc3VzZXMgZHJ1Z3MgKGZpbmRpbmcpLCB2aWN0aW0gb2YgaW50aW1hdGUgcGFydG5lciBhYnVzZSAoZmluZGluZyksIHByZS1lY2xhbXBzaWEgKGRpc29yZGVyKSwgbm9ybWFsIHByZWduYW5jeSAoZmluZGluZyksIHBhcnQtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgbm90IGluIGxhYm9yIGZvcmNlIChmaW5kaW5nKSwgcmVwb3J0cyBvZiB2aW9sZW5jZSBpbiB0aGUgZW52aXJvbm1lbnQgKGZpbmRpbmcpLCBmdWxsLXRpbWUgZW1wbG95bWVudCAoZmluZGluZyksIGRlbnRhbCBmaWxsaW5nIGxvc3QgKGZpbmRpbmcpLCBhY3V0ZSBpbmZlY3RpdmUgY3lzdGl0aXMgKGRpc29yZGVyKSwgZ2luZ2l2aXRpcyAoZGlzb3JkZXIpLCBzdHJlc3MgKGZpbmRpbmcpLCBzb2NpYWwgaXNvbGF0aW9uIChmaW5kaW5nKS4KCiMgU29jaWFsIEhpc3RvcnkKUGF0aWVudCBpcyBtYXJyaWVkLiBQYXRpZW50IGhhcyBuZXZlciBzbW9rZWQuCiBQYXRpZW50IGlkZW50aWZpZXMgYXMgaGV0ZXJvc2V4dWFsLgoKUGF0aWVudCBjb21lcyBmcm9tIGEgaGlnaCBzb2Npb2Vjb25vbWljIGJhY2tncm91bmQuCiBQYXRpZW50IGlzIGEgY29sbGVnZSBncmFkdWF0ZS4KUGF0aWVudCBjdXJyZW50bHkgaGFzIE1lZGljYXJlLgoKIyBBbGxlcmdpZXMKTm8gS25vd24gQWxsZXJnaWVzLgoKIyBNZWRpY2F0aW9ucwpuYXRhemlhIDI4IGRheSBwYWNrOyBidWRlc29uaWRlIDAuMTI1IG1nL21sIGluaGFsYXRpb24gc3VzcGVuc2lvbjsgYWNldGFtaW5vcGhlbiAzMjUgbWcgLyBveHljb2RvbmUgaHlkcm9jaGxvcmlkZSAxMCBtZyBvcmFsIHRhYmxldCBbcGVyY29jZXRdOyBwZW5pY2lsbGluIHYgcG90YXNzaXVtIDUwMCBtZyBvcmFsIHRhYmxldDsgY2VwaGFsZXhpbiA1MDAgbWcgb3JhbCB0YWJsZXQ7IDEgbWwgbWVkcm94eXByb2dlc3Rlcm9uZSBhY2V0YXRlIDE1MCBtZy9tbCBpbmplY3Rpb247IGFjZXRhbWlub3BoZW4gMzI1IG1nIG9yYWwgdGFibGV0IFt0eWxlbm9sXTsgYWxidXRlcm9sIDAuMjEgbWcvbWwgaW5oYWxhdGlvbiBzb2x1dGlvbjsgc29kaXVtIGZsdW9yaWRlIDAuMDI3MiBtZy9tZyBvcmFsIGdlbAoKIyBBc3Nlc3NtZW50IGFuZCBQbGFuClBhdGllbnQgaXMgcHJlc2VudGluZyB3aXRoIG5vcm1hbCBwcmVnbmFuY3kgKGZpbmRpbmcpLiAKCgojIyBQbGFuCgpUaGUgZm9sbG93aW5nIHByb2NlZHVyZXMgd2VyZSBjb25kdWN0ZWQ6Ci0gc3RhbmRhcmQgcHJlZ25hbmN5IHRlc3QgKHByb2NlZHVyZSkKLSB1bHRyYXNvdW5kIHNjYW4gZm9yIGZldGFsIHZpYWJpbGl0eSAocHJvY2VkdXJlKQo="
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:657a7fbf-0500-2af9-0e86-f7a2b523600f",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "657a7fbf-0500-2af9-0e86-f7a2b523600f",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55757-9",
+              "display": "Patient Health Questionnaire 2 item (PHQ-2) [Reported]"
+            }
+          ],
+          "text": "Patient Health Questionnaire 2 item (PHQ-2) [Reported]"
+        },
+        "subject": {
+          "reference": "urn:uuid:1f2aa6c9-41bd-aa05-9da3-e557d8949816"
+        },
+        "encounter": {
+          "reference": "urn:uuid:4d7e678b-9466-ec69-4dd4-826acfa4ddd8"
+        },
+        "effectiveDateTime": "2024-06-11T15:24:32+00:00",
+        "issued": "2024-06-11T15:24:32.849+00:00",
+        "result": [
+          {
+            "reference": "urn:uuid:54bad807-1208-dcce-5f55-b719f67cde5f",
+            "display": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3f03ee32-b90e-a398-dcd7-c0bafe02dc1b",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "3f03ee32-b90e-a398-dcd7-c0bafe02dc1b",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72109-2",
+              "display": "Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]"
+            }
+          ],
+          "text": "Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]"
+        },
+        "subject": {
+          "reference": "urn:uuid:1f2aa6c9-41bd-aa05-9da3-e557d8949816"
+        },
+        "encounter": {
+          "reference": "urn:uuid:4d7e678b-9466-ec69-4dd4-826acfa4ddd8"
+        },
+        "effectiveDateTime": "2024-06-11T16:04:06+00:00",
+        "issued": "2024-06-11T16:04:06.849+00:00",
+        "result": [
+          {
+            "reference": "urn:uuid:5d37e25b-e1d1-2f2b-0c31-b9567570357d",
+            "display": "Total score [AUDIT-C]"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:88a29672-e299-d9cd-bdeb-11bda65ef692",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "88a29672-e299-d9cd-bdeb-11bda65ef692",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24357-6",
+              "display": "Urinalysis macro (dipstick) panel - Urine"
+            }
+          ],
+          "text": "Urinalysis macro (dipstick) panel - Urine"
+        },
+        "subject": {
+          "reference": "urn:uuid:1f2aa6c9-41bd-aa05-9da3-e557d8949816"
+        },
+        "encounter": {
+          "reference": "urn:uuid:66bfe623-83b2-b0dd-ff55-874ca30ce162"
+        },
+        "effectiveDateTime": "2016-12-19T15:13:49+00:00",
+        "issued": "2016-12-19T15:13:49.849+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|82c72223-f521-3a34-9b9b-4ff366365399",
+            "display": "CARNEY HOSPITAL"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:18cf5671-8f82-7ca4-3037-13869f51ddee",
+            "display": "Glucose [Mass/volume] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:c046dc01-6dca-07a4-bf16-8ec46a9f7316",
+            "display": "Ketones [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:e9f11986-7c8a-7de7-a7e1-9b73396f5216",
+            "display": "Specific gravity of Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:23f6b570-5f99-cc97-d323-79ad576e35c5",
+            "display": "pH of Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:446eb79e-50a7-b5a9-2da3-807f24d648a3",
+            "display": "Protein [Mass/volume] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:4a94adf7-7331-e10d-35f1-94f38916f488",
+            "display": "Nitrite [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:57ce5775-2e08-35a0-781b-2ebd2ebc0dcb",
+            "display": "Hemoglobin [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:a61446e4-a5d3-897b-7eb2-0b4c3965e0cb",
+            "display": "Leukocyte esterase [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:b437a9a2-9852-f0f6-f5ad-b7fd9e76797c",
+            "display": "WBCs"
+          },
+          {
+            "reference": "urn:uuid:6199d3b6-2a24-af42-604e-458b1e68221d",
+            "display": "RBCs"
+          },
+          {
+            "reference": "urn:uuid:f7ea43ea-cad8-1602-0994-895247a948d2",
+            "display": "Epithelial Cells"
+          },
+          {
+            "reference": "urn:uuid:2df4ba36-81ae-face-cd55-9ad3f8d8bc7a",
+            "display": "Casts"
+          },
+          {
+            "reference": "urn:uuid:87174fd3-f68c-b1b2-2728-7f7f4dec4966",
+            "display": "Mucus Threads"
+          },
+          {
+            "reference": "urn:uuid:e13cab4a-e5bd-1caa-e332-7331410eee57",
+            "display": "Bacteria"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:92cec03b-5dba-a396-eb9a-5aa31f0f3789",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "92cec03b-5dba-a396-eb9a-5aa31f0f3789",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "82666-9",
+              "display": "Drug Abuse Screening Test-10 [DAST-10]"
+            }
+          ],
+          "text": "Drug Abuse Screening Test-10 [DAST-10]"
+        },
+        "subject": {
+          "reference": "urn:uuid:1f2aa6c9-41bd-aa05-9da3-e557d8949816"
+        },
+        "encounter": {
+          "reference": "urn:uuid:41a43cd7-f242-38ee-1d23-14d582ffea85"
+        },
+        "effectiveDateTime": "2023-06-06T16:26:21+00:00",
+        "issued": "2023-06-06T16:26:21.849+00:00",
+        "result": [
+          {
+            "reference": "urn:uuid:08fae552-2866-b945-c95d-1efef04bb133",
+            "display": "Total score [DAST-10]"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b0d40120-fa75-df9c-b5e2-68145fc1377c",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "b0d40120-fa75-df9c-b5e2-68145fc1377c",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2",
+              "display": "CBC panel - Blood by Automated count"
+            }
+          ],
+          "text": "CBC panel - Blood by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:1f2aa6c9-41bd-aa05-9da3-e557d8949816"
+        },
+        "encounter": {
+          "reference": "urn:uuid:4d7e678b-9466-ec69-4dd4-826acfa4ddd8"
+        },
+        "effectiveDateTime": "2024-06-11T13:45:44+00:00",
+        "issued": "2024-06-11T13:45:44.849+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|39c15c0f-5c49-311e-99d2-1fb99d80e06e",
+            "display": "HARBOR HEALTH SERVICES INC"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:9aa20f01-cdb7-65b4-ea7d-32e05348d107",
+            "display": "Leukocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:43cc2660-58f2-a0c1-8ffa-ba4662facf63",
+            "display": "Erythrocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:0fbc2702-331c-7d7f-4ae9-578add7df048",
+            "display": "Hemoglobin [Mass/volume] in Blood"
+          },
+          {
+            "reference": "urn:uuid:1bc0aeb3-54c0-2918-bc23-b8b6e39c2ba4",
+            "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:10e7e186-2ef9-35d4-7041-079406459c42",
+            "display": "MCV [Entitic volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:4561f2a9-7fe4-dec9-1edb-0bae49de3680",
+            "display": "MCH [Entitic mass] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:3ec68dc2-7cce-c901-7f88-3b6d24b85c5b",
+            "display": "MCHC [Mass/volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:7f04e43e-bac8-7e85-861a-4b5f4df8cc10",
+            "display": "Erythrocyte distribution width [Entitic volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:ebd1c72f-fec7-bc07-1eed-1217f7613cc2",
+            "display": "Platelets [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:d9c7b170-da37-a42d-8974-a42d0c9320e5",
+            "display": "Platelet distribution width [Entitic volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:e8eb4753-6eb3-13a2-d176-2f395fd9085d",
+            "display": "Platelet mean volume [Entitic volume] in Blood by Automated count"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:33d718ac-e3b1-fe26-1607-9d3cfe6c857e",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "33d718ac-e3b1-fe26-1607-9d3cfe6c857e",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "69737-5",
+              "display": "Generalized anxiety disorder 7 item (GAD-7)"
+            }
+          ],
+          "text": "Generalized anxiety disorder 7 item (GAD-7)"
+        },
+        "subject": {
+          "reference": "urn:uuid:1f2aa6c9-41bd-aa05-9da3-e557d8949816"
+        },
+        "encounter": {
+          "reference": "urn:uuid:4d7e678b-9466-ec69-4dd4-826acfa4ddd8"
+        },
+        "effectiveDateTime": "2024-06-11T14:44:25+00:00",
+        "issued": "2024-06-11T14:44:25.849+00:00",
+        "result": [
+          {
+            "reference": "urn:uuid:d909b993-2868-5223-10bb-a5b44871e803",
+            "display": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ea4f2b37-2a8b-1e38-2e20-9029e73e333b",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "ea4f2b37-2a8b-1e38-2e20-9029e73e333b",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "76499-3",
+              "display": "Humiliation, Afraid, Rape, and Kick questionnaire [HARK]"
+            }
+          ],
+          "text": "Humiliation, Afraid, Rape, and Kick questionnaire [HARK]"
+        },
+        "subject": {
+          "reference": "urn:uuid:1f2aa6c9-41bd-aa05-9da3-e557d8949816"
+        },
+        "encounter": {
+          "reference": "urn:uuid:9175628b-eb7e-08b0-c8d7-72bf3cebc1d0"
+        },
+        "effectiveDateTime": "2022-05-31T15:32:19+00:00",
+        "issued": "2022-05-31T15:32:19.849+00:00",
+        "result": [
+          {
+            "reference": "urn:uuid:56db596f-186f-4fd8-c6d9-7524d5679a71",
+            "display": "Total score [HARK]"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0bee9031-f41b-3420-e2e5-615e341035a6",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "0bee9031-f41b-3420-e2e5-615e341035a6",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "57698-3",
+              "display": "Lipid panel with direct LDL - Serum or Plasma"
+            }
+          ],
+          "text": "Lipid panel with direct LDL - Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:1f2aa6c9-41bd-aa05-9da3-e557d8949816"
+        },
+        "encounter": {
+          "reference": "urn:uuid:41a43cd7-f242-38ee-1d23-14d582ffea85"
+        },
+        "effectiveDateTime": "2023-06-06T13:45:44+00:00",
+        "issued": "2023-06-06T13:45:44.849+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|39c15c0f-5c49-311e-99d2-1fb99d80e06e",
+            "display": "HARBOR HEALTH SERVICES INC"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:b6cde9b6-a262-d52b-ecaf-da14cda8d4ea",
+            "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:2f17144c-2de7-5611-acaa-4aec6cce8455",
+            "display": "Triglycerides"
+          },
+          {
+            "reference": "urn:uuid:f0d0f6b3-6bb6-5cb6-2299-4fb5ceba1cef",
+            "display": "Low Density Lipoprotein Cholesterol"
+          },
+          {
+            "reference": "urn:uuid:cf52bcc3-faef-3fa6-8fab-ca727dc9111a",
+            "display": "Cholesterol in HDL [Mass/volume] in Serum or Plasma"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:81480488-127e-68c6-07c5-68ebf93fd4a1",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "81480488-127e-68c6-07c5-68ebf93fd4a1",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2",
+              "display": "CBC panel - Blood by Automated count"
+            }
+          ],
+          "text": "CBC panel - Blood by Automated count"
+        },
+        "subject": {
+          "reference": "urn:uuid:08ae06c3-a18b-9352-d94b-97eeb6a443e8"
+        },
+        "encounter": {
+          "reference": "urn:uuid:479177b4-fee8-7198-edc7-5b4b260c13d7"
+        },
+        "effectiveDateTime": "2006-08-11T13:14:50+00:00",
+        "issued": "2006-08-11T13:14:50.152+00:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|0e061004-bcc0-3e99-a237-d700823e817b",
+            "display": "MOUNTAIN VIEW FAMILY PRACTICE PC"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:cd2e2f66-ee95-037e-db11-da583069832f",
+            "display": "Leukocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:cc7cb16c-0ee7-6416-53fb-2b8bce11cdb8",
+            "display": "Erythrocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:7e66bfda-631e-dad0-a660-bc84c3e1939a",
+            "display": "Hemoglobin [Mass/volume] in Blood"
+          },
+          {
+            "reference": "urn:uuid:40d0e66d-f7a9-ed12-26c9-0366c0f3067c",
+            "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:74d13eb1-4064-d557-9679-26c84b761b65",
+            "display": "MCV [Entitic volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:5d28842d-9660-388e-2adc-4db7d62a4ae5",
+            "display": "MCH [Entitic mass] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:861f7205-12b4-3fb7-924a-d2913cb876de",
+            "display": "MCHC [Mass/volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:ff76c6dd-24c4-7b6d-d257-2a484312912b",
+            "display": "Erythrocyte distribution width [Entitic volume] by Automated count"
+          },
+          {
+            "reference": "urn:uuid:a360245b-d239-8a2c-21b0-8436b4db83dd",
+            "display": "Platelets [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:95a915b5-bdb3-736b-bb7d-c696d18196c6",
+            "display": "Platelet distribution width [Entitic volume] in Blood by Automated count"
+          },
+          {
+            "reference": "urn:uuid:33b5ecf2-48d7-d8e5-52bb-2a247c416f81",
+            "display": "Platelet mean volume [Entitic volume] in Blood by Automated count"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:93f4a0f5-d276-ade0-1b84-1f213e08761e",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "93f4a0f5-d276-ade0-1b84-1f213e08761e",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "34117-2",
+                "display": "History and physical note"
+              },
+              {
+                "system": "http://loinc.org",
+                "code": "51847-2",
+                "display": "Evaluation + Plan note"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34117-2",
+              "display": "History and physical note"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "51847-2",
+              "display": "Evaluation + Plan note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:08ae06c3-a18b-9352-d94b-97eeb6a443e8"
+        },
+        "encounter": {
+          "reference": "urn:uuid:0f097640-529f-d14f-0c23-7d88f67bddbf"
+        },
+        "effectiveDateTime": "2007-09-21T13:14:50+00:00",
+        "issued": "2007-09-21T13:14:50.152+00:00",
+        "performer": [
+          {
+            "reference": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999956599",
+            "display": "Dr. Kizzie166 Lehner980"
+          }
+        ],
+        "presentedForm": [
+          {
+            "contentType": "text/plain; charset=utf-8",
+            "data": "CjIwMDctMDktMjEKCiMgQ2hpZWYgQ29tcGxhaW50Ck5vIGNvbXBsYWludHMuCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkpvbm5pZTIxNQogaXMgYSAxIHllYXItb2xkIG5vbmhpc3BhbmljIHdoaXRlIGZlbWFsZS4gUGF0aWVudCBoYXMgYSBoaXN0b3J5IG9mIG1lZGljYXRpb24gcmV2aWV3IGR1ZSAoc2l0dWF0aW9uKSwgb3RpdGlzIG1lZGlhIChkaXNvcmRlcikuCgojIFNvY2lhbCBIaXN0b3J5CiBQYXRpZW50IGhhcyBuZXZlciBzbW9rZWQuCgoKUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KClBhdGllbnQgY3VycmVudGx5IGhhcyBDaWduYSBIZWFsdGguCgojIEFsbGVyZ2llcwpObyBLbm93biBBbGxlcmdpZXMuCgojIE1lZGljYXRpb25zCmNlZnVyb3hpbWUgMjUwIG1nIG9yYWwgdGFibGV0OyBhY2V0YW1pbm9waGVuIDE2MCBtZyBjaGV3YWJsZSB0YWJsZXQKCiMgQXNzZXNzbWVudCBhbmQgUGxhbgoKCgojIyBQbGFuCgo="
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3704b01e-3815-f7d2-86c9-fabf976847aa",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "3704b01e-3815-f7d2-86c9-fabf976847aa",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "69409-1",
+              "display": "U.S. standard certificate of death - 2003 revision"
+            }
+          ],
+          "text": "U.S. standard certificate of death - 2003 revision"
+        },
+        "subject": {
+          "reference": "urn:uuid:08ae06c3-a18b-9352-d94b-97eeb6a443e8"
+        },
+        "encounter": {
+          "reference": "urn:uuid:0f097640-529f-d14f-0c23-7d88f67bddbf"
+        },
+        "effectiveDateTime": "2007-09-21T13:14:50+00:00",
+        "issued": "2007-09-21T13:14:50.152+00:00",
+        "result": [
+          {
+            "reference": "urn:uuid:298d8087-1abf-4fe2-79ce-753ade9454b2",
+            "display": "Cause of Death [US Standard Certificate of Death]"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    }
+  ]
+}
