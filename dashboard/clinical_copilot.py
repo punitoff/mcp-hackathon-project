@@ -11,9 +11,34 @@ from typing import Dict, List, Optional, Any, Tuple
 import requests
 import sys
 
-# Add Database Simulation directory to path
-sys.path.append('/Users/punitvats/CascadeProjects/mcp-hackathon-project/Database Simulation')
-from client_medicaldataretrieval import get_random_patient_data, get_movemend_data
+# Add Database Simulation directory to path - use relative path for Streamlit Cloud compatibility
+import os
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+database_sim_path = os.path.join(project_root, 'Database Simulation')
+sys.path.append(database_sim_path)
+
+# Import database client functions with error handling for Streamlit Cloud
+try:
+    from client_medicaldataretrieval import get_random_patient_data, get_movemend_data
+except ImportError:
+    # Define fallback functions for Streamlit Cloud where database servers might not be available
+    def get_random_patient_data(count=15):
+        # Return mock response for Streamlit Cloud
+        return MockResponse([{"id": f"patient{i}", "name": f"Test Patient {i}", "gender": "Female" if i % 2 == 0 else "Male", 
+                            "age": 30 + i, "conditions": ["Hypertension", "Diabetes"]} for i in range(count)])
+        
+    def get_movemend_data(patient_id):
+        # Return mock response for Streamlit Cloud
+        return MockResponse({"patient_id": patient_id, "exercises": ["Walking", "Stretching"], 
+                           "adherence": "Good", "progress": "Improving"})
+    
+    # Mock response class
+    class MockResponse:
+        def __init__(self, data):
+            self.data = data
+        
+        def json(self):
+            return self.data
 
 # Real AI Service using Claude LLM
 import sys
