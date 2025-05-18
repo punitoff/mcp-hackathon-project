@@ -2,6 +2,7 @@
 
 from typing import Dict, List, Any, Optional
 import uuid
+import base64
 
 class Resource:
     """Base class for MCP resources."""
@@ -65,6 +66,37 @@ class MemoryResource(Resource):
             uri = f"memory:{memory_category}:{metadata['timestamp']}"
             super().__init__(memory_data, "memory", metadata)
             self.uri = uri
+
+class VoiceResource(Resource):
+    """Voice resource for text-to-speech content in the MCP server."""
+    
+    def __init__(self, voice_data: Dict[str, Any], metadata: Optional[Dict[str, Any]] = None):
+        # Generate metadata if not provided
+        if metadata is None:
+            metadata = {}
+            
+        # Add timestamp and other voice metadata
+        import datetime
+        metadata["timestamp"] = datetime.datetime.now().isoformat()
+        
+        # Add voice specific metadata
+        if "voice_id" in voice_data:
+            metadata["voice_id"] = voice_data["voice_id"]
+        
+        # Create a unique URI for this voice resource
+        text_preview = voice_data.get("text", "")[:20].replace(" ", "_")
+        uri = f"voice:{text_preview}:{metadata['timestamp']}"
+        
+        # Initialize the resource
+        super().__init__(voice_data, "voice", metadata)
+        self.uri = uri
+        
+    def get_audio_base64(self) -> str:
+        """Get the base64 encoded audio content."""
+        audio_bytes = self.content.get("audio_bytes")
+        if audio_bytes:
+            return base64.b64encode(audio_bytes).decode('utf-8')
+        return ""
 
 class ResourceRegistry:
     """Registry of MCP resources."""

@@ -5,12 +5,17 @@ import os
 import datetime
 from typing import Dict, List, Any, Optional, Tuple
 import json
+import asyncio
 
 # Add Database Simulation directory to path
 sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'Database Simulation'))
 from client_medicaldataretrieval import get_random_patient_data, get_movemend_data
 
-from .resources import Resource, PatientResource, MemoryResource, ResourceRegistry
+# Import MCP resources
+from .resources import Resource, PatientResource, MemoryResource, VoiceResource, ResourceRegistry
+
+# Voice client import removed
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 class MCPServer:
     """MCP server implementation that works with Streamlit."""
@@ -164,6 +169,18 @@ class MCPServer:
         self.registry.resources.pop(memory_uri, None)
         
         return True
+        
+    def generate_voice(self, text: str, voice_id: str = "samantha") -> Dict[str, Any]:
+        """Generate voice audio from text (disabled).
+        
+        Args:
+            text: The text to convert to speech
+            voice_id: The voice ID to use (default: samantha)
+            
+        Returns:
+            Dictionary with error message
+        """
+        return {"error": "Voice generation is disabled", "status": "disabled"}
 
 # Create a singleton instance
 mcp_server = MCPServer()

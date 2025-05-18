@@ -39,5 +39,7 @@ def get_random_patient_record():
 def reset_patient_selection():
     """Reset the patient selection, making all patients available again"""
     global _available_patient_files, _used_patient_files
-    _available_patient_files = list(_available_patient_files + list(_used_patient_files))
+    _initialize_patient_files()  # Ensure files are initialized
+    _available_patient_files = [f for f in os.listdir(database_path) if f.endswith('.json')]
     _used_patient_files.clear()
+    print(f"Patient selection reset. {len(_available_patient_files)} patients available.")

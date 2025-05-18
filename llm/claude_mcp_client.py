@@ -18,14 +18,15 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from mcp_server.app import mcp_server
+from llm.config import CLAUDE_API_KEY, CLAUDE_MODEL
 
 class ClaudeMCPClient:
     """Client for using Claude with MCP for MoveMend."""
     
     def __init__(self, api_key: Optional[str] = None):
-        self.api_key = api_key or os.getenv("ANTHROPIC_API_KEY", "")
+        self.api_key = api_key or CLAUDE_API_KEY
         self.client = anthropic.Anthropic(api_key=self.api_key)
-        self.model = os.getenv("CLAUDE_MODEL", "claude-3-opus-20240229")
+        self.model = CLAUDE_MODEL
         
         # Define MCP tools
         self.mcp_tools = self._create_mcp_tools()
@@ -63,6 +64,24 @@ class ClaudeMCPClient:
                         }
                     },
                     "required": ["uri"]
+                }
+            },
+            {
+                "name": "generate_voice",
+                "description": "Generates speech audio from text using Hume AI voice synthesis.",
+                "input_schema": {
+                    "type": "object",
+                    "properties": {
+                        "text": {
+                            "type": "string",
+                            "description": "The text to convert to speech."
+                        },
+                        "voice_id": {
+                            "type": "string",
+                            "description": "Optional voice ID to use (default: samantha)."
+                        }
+                    },
+                    "required": ["text"]
                 }
             },
             {
@@ -144,6 +163,8 @@ class ClaudeMCPClient:
                 result = self._handle_get_memories(tool_args)
             elif tool_name == "delete_memory":
                 result = self._handle_delete_memory(tool_args)
+            elif tool_name == "generate_voice":
+                result = self._handle_generate_voice(tool_args)
             else:
                 result = {"error": f"Unknown tool: {tool_name}"}
                 
@@ -156,48 +177,58 @@ class ClaudeMCPClient:
     
     def _handle_mcp_tool_call(self, tool_call: Dict[str, Any]) -> Dict[str, Any]:
         """Handle an MCP tool call from Claude."""
-        tool_name = tool_call.get("name")
-        tool_params = tool_call.get("parameters", {})
-        
-        # Initialize MCP server if not already initialized
-        if not mcp_server.initialized:
-            mcp_server.initialize()
-        
-        if tool_name == "list_resources":
-            resource_type = tool_params.get("resource_type")
-            cursor = tool_params.get("cursor")
-            resources, next_cursor = mcp_server.list_resources(resource_type, cursor)
-            return {
-                "resources": resources,
-                "next_cursor": next_cursor
-            }
-        elif tool_name == "read_resource":
-            uri = tool_params.get("uri")
-            if not uri:
-                return {"error": "URI is required"}
-            resource = mcp_server.read_resource(uri)
-            if not resource:
-                return {"error": f"Resource not found: {uri}"}
-            return resource
-        elif tool_name == "create_memory":
-            content = tool_params.get("content")
-            category = tool_params.get("category")
-            patient_id = tool_params.get("patient_id")
-            memory = mcp_server.create_memory(content, category, patient_id)
-            return memory
-        elif tool_name == "get_memories":
-            patient_id = tool_params.get("patient_id")
-            category = tool_params.get("category")
-            memories = mcp_server.get_memories(patient_id, category)
-            return memories
-        elif tool_name == "delete_memory":
-            memory_uri = tool_params.get("memory_uri")
-            if not memory_uri:
-                return {"error": "Memory URI is required"}
-            result = mcp_server.delete_memory(memory_uri)
-            return result
-        else:
-            return {"error": f"Unknown tool: {tool_name}"}
+        try:
+            tool_name = tool_call.get("name")
+            tool_params = tool_call.get("parameters", {})
+            
+            # Initialize MCP server if not already initialized
+            if not mcp_server.initialized:
+                mcp_server.initialize()
+            
+            if tool_name == "list_resources":
+                resource_type = tool_params.get("resource_type")
+                cursor = tool_params.get("cursor")
+                resources, next_cursor = mcp_server.list_resources(resource_type, cursor)
+                return {
+                    "resources": resources,
+                    "next_cursor": next_cursor
+                }
+            elif tool_name == "read_resource":
+                uri = tool_params.get("uri")
+                if not uri:
+                    return {"error": "URI is required"}
+                resource = mcp_server.read_resource(uri)
+                if not resource:
+                    return {"error": f"Resource not found: {uri}"}
+                return resource
+            elif tool_name == "create_memory":
+                content = tool_params.get("content")
+                category = tool_params.get("category")
+                patient_id = tool_params.get("patient_id")
+                memory = mcp_server.create_memory(content, category, patient_id)
+                return memory
+            elif tool_name == "get_memories":
+                patient_id = tool_params.get("patient_id")
+                category = tool_params.get("category")
+                memories = mcp_server.get_memories(patient_id, category)
+                return memories
+            elif tool_name == "delete_memory":
+                memory_uri = tool_params.get("memory_uri")
+                if not memory_uri:
+                    return {"error": "Memory URI is required"}
+                result = mcp_server.delete_memory(memory_uri)
+                return result
+            elif tool_name == "generate_voice":
+                text = tool_params.get("text")
+                voice_id = tool_params.get("voice_id", "samantha")
+                if not text:
+                    return {"error": "Missing required 'text' parameter"}
+                result = mcp_server.generate_voice(text, voice_id)
+                return {"content": [{"type": "text", "text": json.dumps(result, indent=2)}]}
+            else:
+                return {"error": f"Unknown tool: {tool_name}"}
+        except Exception as e:
+            return {"error": str(e)}
     
     def _handle_list_resources(self, tool_args):
         resource_type = tool_args.get("resource_type")
@@ -231,11 +262,27 @@ class ClaudeMCPClient:
         return memories
     
     def _handle_delete_memory(self, tool_args):
+        """Handle the delete_memory tool call."""
         memory_uri = tool_args.get("memory_uri")
-        if not memory_uri:
-            return {"error": "Memory URI is required"}
-        result = mcp_server.delete_memory(memory_uri)
-        return result
+        if memory_uri:
+            result = mcp_server.delete_memory(memory_uri)
+            return {"content": [{"type": "text", "text": json.dumps({"success": result})}]}
+            
+        return {"content": [{"type": "text", "text": "Error: Missing memory_uri parameter"}]}
+        
+    def _handle_generate_voice(self, tool_args):
+        """Handle the generate_voice tool call."""
+        text = tool_args.get("text")
+        voice_id = tool_args.get("voice_id", "samantha")
+        
+        if not text:
+            return {"content": [{"type": "text", "text": "Error: Missing required 'text' parameter"}]}
+            
+        # Generate voice using MCP server
+        result = mcp_server.generate_voice(text, voice_id)
+        
+        # Return the result as a pretty-printed JSON string
+        return {"content": [{"type": "text", "text": json.dumps(result, indent=2)}]}
     
     def chat_with_mcp(self, messages: List[Dict[str, str]], 
                      system_prompt: Optional[str] = None,

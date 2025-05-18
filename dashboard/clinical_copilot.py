@@ -27,10 +27,38 @@ if project_root not in sys.path:
 try:
     from llm.claude_client import claude_client, ClaudeClient
     from llm.claude_mcp_client import claude_mcp_client, ClaudeMCPClient
+    from llm.hume_voice_client import hume_voice_client, HumeVoiceClient
+    from llm.speech_recognition_client import speech_recognition_client, SpeechRecognitionClient
+    from streamlit_webrtc import webrtc_streamer, WebRtcMode
+    import av
     LLM_AVAILABLE = True
+    VOICE_AVAILABLE = True
+    SPEECH_RECOGNITION_AVAILABLE = True
 except (ImportError, ModuleNotFoundError) as e:
-    print(f"Warning: Claude LLM clients not available: {e}")
+    print(f"Warning: Claude LLM clients, HUME Voice client or Speech Recognition not available: {e}")
     LLM_AVAILABLE = False
+    VOICE_AVAILABLE = False
+    SPEECH_RECOGNITION_AVAILABLE = False
+
+# Initialize voice mode state if not already set
+if 'voice_mode_active' not in st.session_state:
+    st.session_state.voice_mode_active = False
+    
+if 'voice_output_ready' not in st.session_state:
+    st.session_state.voice_output_ready = False
+    
+if 'voice_output_audio' not in st.session_state:
+    st.session_state.voice_output_audio = None
+    
+# Initialize speech recognition state
+if 'speech_recognition_active' not in st.session_state:
+    st.session_state.speech_recognition_active = False
+    
+if 'last_voice_command' not in st.session_state:
+    st.session_state.last_voice_command = ""
+    
+if 'voice_commands_history' not in st.session_state:
+    st.session_state.voice_commands_history = []
 
 class AIClinicalAssistant:
     """AI Clinical Assistant using Claude LLM."""
@@ -163,7 +191,7 @@ Patient reports {random.choice(['improving symptoms', 'stable condition', 'mild 
     
     @staticmethod
     def generate_mcp_summary(patient_uri: Optional[str] = None) -> str:
-        """Generate a clinical summary using MCP to fetch patient data."""
+        """Generate a comprehensive clinical summary using advanced data integration."""
         try:
             if LLM_AVAILABLE:
                 # Initialize MCP server if not already initialized
@@ -174,10 +202,191 @@ Patient reports {random.choice(['improving symptoms', 'stable condition', 'mild 
                 # Use Claude MCP client to generate summary
                 return claude_mcp_client.generate_clinical_summary_with_mcp(patient_uri)
             else:
-                return "## MCP Summary\n\nMCP functionality not available. Please check that Claude API is configured correctly."
+                return "## Advanced Clinical Summary\n\nAdvanced summary functionality not available. Please check that Claude API is configured correctly."
         except Exception as e:
-            st.error(f"Error generating MCP summary with Claude: {e}")
-            return f"## MCP Summary\n\n**Error**: Could not generate summary using MCP. Please check the logs."
+            st.error(f"Error generating comprehensive summary with Claude: {e}")
+            return f"## Advanced Clinical Summary\n\n**Error**: Could not generate comprehensive summary. Please check the logs."
+            
+    @staticmethod
+    def process_voice_command(command: str, patient_data_list: List[Dict]) -> Tuple[str, Dict, bytes]:
+        """Process a voice command and return appropriate response.
+        
+        Args:
+            command: The voice command from the user
+            patient_data_list: List of all patient data
+            
+        Returns:
+            Tuple of (text_response, selected_patient_data, audio_bytes)
+        """
+        try:
+            if not VOICE_AVAILABLE:
+                return "Voice processing is not available.", None, None
+                
+            # Convert command to lowercase for easier matching
+            command = command.lower()
+            
+            # Find the most critical patient
+            critical_patient = AIClinicalAssistant._find_most_critical_patient(patient_data_list)
+            
+            # Generate response based on command
+            if "tell me the summary" in command or "summary of" in command or "critical patient" in command:
+                # Generate a text summary
+                text_summary = AIClinicalAssistant.generate_summary(critical_patient)
+                
+                # Get voice response
+                audio_bytes = hume_voice_client.get_critical_patient_summary_voice(critical_patient)
+                
+                return text_summary, critical_patient, audio_bytes
+            else:
+                # Handle other commands or questions
+                text_response = AIClinicalAssistant.answer_question(command, critical_patient)
+                audio_bytes = hume_voice_client.generate_summary_voice(text_response)
+                
+                return text_response, critical_patient, audio_bytes
+                
+        except Exception as e:
+            st.error(f"Error processing voice command: {e}")
+            return f"Error processing voice command: {str(e)}", None, None
+            
+    @staticmethod
+    def _find_most_critical_patient(patient_data_list: List[Dict]) -> Dict:
+        """Find the most critical patient based on conditions and vitals.
+        
+        Args:
+            patient_data_list: List of all patient data
+            
+        Returns:
+            Dictionary with the most critical patient data
+        """
+        # If empty list, return empty dict
+        if not patient_data_list:
+            return {}
+            
+        # Define a function to score patient criticality
+        def calculate_criticality(patient):
+            score = 0
+            
+            # Score based on conditions (more conditions = higher score)
+            conditions = patient.get("conditions", [])
+            score += len(conditions) * 5
+            
+            # Check for critical conditions
+            critical_keywords = [
+                "heart", "cardiac", "stroke", "pulmonary", "respiratory",
+                "failure", "sepsis", "infection", "fracture", "trauma"
+            ]
+            
+            for condition in conditions:
+                # Add points for each critical keyword found in condition
+                for keyword in critical_keywords:
+                    if keyword.lower() in condition.lower():
+                        score += 10
+            
+            # Score based on vitals
+            vitals = patient.get("vitals", {})
+            
+            # Check blood pressure
+            sbp = vitals.get("sbp")
+            dbp = vitals.get("dbp")
+            if sbp and (sbp > 140 or sbp < 90):
+                score += 15
+            if dbp and (dbp > 90 or dbp < 60):
+                score += 15
+                
+            # Check heart rate
+            hr = vitals.get("hr")
+            if hr and (hr > 100 or hr < 50):
+                score += 15
+                
+            # Check pain score
+            pain = vitals.get("pain_score")
+            if pain and pain >= 7:
+                score += 20
+                
+            return score
+        
+        # Score each patient and find the one with the highest score
+        scored_patients = [(calculate_criticality(p), p) for p in patient_data_list]
+        scored_patients.sort(reverse=True)  # Sort in descending order
+        
+        # Return the most critical patient
+        return scored_patients[0][1] if scored_patients else {}
+        
+    @staticmethod
+    def toggle_voice_mode():
+        """Toggle the voice mode on/off in the session state."""
+        st.session_state.voice_mode_active = not st.session_state.voice_mode_active
+        
+        # Reset voice output when toggling
+        st.session_state.voice_output_ready = False
+        st.session_state.voice_output_audio = None
+        
+        # Stop speech recognition if it's active
+        if st.session_state.speech_recognition_active and not st.session_state.voice_mode_active:
+            AIClinicalAssistant.stop_speech_recognition()
+    
+    @staticmethod
+    def toggle_speech_recognition():
+        """Toggle speech recognition on/off."""
+        if SPEECH_RECOGNITION_AVAILABLE:
+            if st.session_state.speech_recognition_active:
+                AIClinicalAssistant.stop_speech_recognition()
+            else:
+                AIClinicalAssistant.start_speech_recognition()
+        else:
+            st.error("Speech recognition is not available. Check your installation.")
+    
+    @staticmethod
+    def start_speech_recognition():
+        """Start the speech recognition client."""
+        if SPEECH_RECOGNITION_AVAILABLE:
+            try:
+                # Callback function to handle recognized speech
+                def handle_speech(text):
+                    if text and text.strip():
+                        st.session_state.last_voice_command = text.strip()
+                        st.session_state.voice_commands_history.append(text.strip())
+                        # Force streamlit to rerun to update the UI
+                        st.experimental_rerun()
+                
+                # Start listening for speech
+                speech_recognition_client.start_listening(callback=handle_speech)
+                st.session_state.speech_recognition_active = True
+                return True
+            except Exception as e:
+                st.error(f"Error starting speech recognition: {str(e)}")
+                return False
+        return False
+    
+    @staticmethod
+    def stop_speech_recognition():
+        """Stop the speech recognition client."""
+        if SPEECH_RECOGNITION_AVAILABLE and st.session_state.speech_recognition_active:
+            try:
+                speech_recognition_client.stop_listening()
+                st.session_state.speech_recognition_active = False
+                return True
+            except Exception as e:
+                st.error(f"Error stopping speech recognition: {str(e)}")
+                return False
+        return False
+    
+    @staticmethod
+    def process_recognized_speech():
+        """Process any recognized speech from the speech recognition client."""
+        if SPEECH_RECOGNITION_AVAILABLE and st.session_state.speech_recognition_active:
+            try:
+                # Check if we have a new command
+                text = speech_recognition_client.get_recognized_text()
+                if text and text.strip():
+                    st.session_state.last_voice_command = text.strip()
+                    st.session_state.voice_commands_history.append(text.strip())
+                    return text.strip()
+                return None
+            except Exception as e:
+                st.error(f"Error processing recognized speech: {str(e)}")
+                return None
+        return None
 
 # Set page config with light theme explicitly
 st.set_page_config(
@@ -387,6 +596,20 @@ st.markdown('''
         border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
     }
     
+    /* Style for horizontal dividers - multiple selectors for different scenarios */
+    hr, 
+    .stMarkdown hr,
+    .element-container hr,
+    .stHorizontalBlock hr,
+    .stVerticalBlock hr,
+    .stExpander hr {
+        border: none !important;
+        height: 1px !important;
+        background-color: rgba(0, 0, 0, 0.1) !important;
+        margin: 1.5rem 0 !important;
+        opacity: 0.3 !important;
+    }
+    
     /* Fix tables with direct styling */
     table {
         background-color: #ffffff !important;
@@ -488,15 +711,39 @@ st.markdown('''
     }
     
     /* Button styling */
-    button[kind="primary"] {
+    button[kind="primary"], 
+    button.css-1cpxqw2, 
+    button.css-1p1lx2y {
         background-color: #2ecc71 !important;
+        border-radius: 6px !important;
+        color: #ffffff !important;
+    }
+    
+    button[kind="secondary"], 
+    button.css-5rimss, 
+    button.css-gw32o0 {
+        border-color: #2ecc71 !important;
+        color: #2ecc71 !important;
+        background-color: #ffffff !important;
         border-radius: 6px !important;
     }
     
-    button[kind="secondary"] {
-        border-color: #2ecc71 !important;
-        color: #2ecc71 !important;
-        border-radius: 6px !important;
+    /* Override specific black-colored button elements */
+    button, 
+    button[data-testid="baseButton-secondary"],
+    .stButton>button, 
+    .css-7ym5gk,
+    .css-1ekf893, 
+    .css-17f8hu8 {
+        background-color: #f8f9fa !important;
+        color: #1a1a2e !important;
+        border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* Make sure primary action buttons keep their proper color */
+    button.primary, button[kind="primary"] {
+        background-color: #2ecc71 !important;
+        color: white !important;
     }
 </style>
 ''', unsafe_allow_html=True)
@@ -1163,7 +1410,8 @@ def display_active_problems(patient: Dict) -> None:
     """Display active problems."""
     st.markdown("### Active Problems")
     st.markdown(", ".join(patient["conditions"]) if patient["conditions"] else "No active problems")
-    st.markdown("---")
+    # Using a subtle divider with custom styling
+    st.markdown("<div style='height: 1px; background-color: rgba(0,0,0,0.1); margin: 1.5rem 0; opacity: 0.3;'></div>", unsafe_allow_html=True)
 
 def display_recent_labs(patient: Dict) -> None:
     """Display recent lab results using custom HTML table."""
@@ -1196,7 +1444,8 @@ def display_recent_labs(patient: Dict) -> None:
         labs.get('Glucose', '--') + ' mg/dL',
         labs.get('HbA1c', '--') + '%'
     ))
-    st.markdown("---")
+    # Using a subtle divider with custom styling
+    st.markdown("<div style='height: 1px; background-color: rgba(0,0,0,0.1); margin: 1.5rem 0; opacity: 0.3;'></div>", unsafe_allow_html=True)
 
 def display_billing() -> None:
     """Display billing information."""
@@ -1205,23 +1454,26 @@ def display_billing() -> None:
 
 def display_clinical_summary(patient: Dict):
     """Display AI-generated clinical summary from Claude."""
-    st.markdown("### AI Clinical Summary")
+    # In Summary view, the header is added separately as part of the breadcrumb content
+    if st.session_state.view_mode != "Summary":
+        st.markdown("### AI Clinical Summary")
     
     with st.spinner("Generating clinical summary with Claude AI..."):
         # Call the AI Clinical Assistant to generate the summary
         summary = AIClinicalAssistant.generate_summary(patient)
         st.markdown(summary)
-    
-    # Add an MCP-based summary option
-    if st.button("Generate MCP-based Summary"):
-        with st.spinner("Generating MCP-based summary with Claude AI..."):
+    if st.button("Generate Comprehensive Summary"):
+        with st.spinner("Generating comprehensive summary with Claude AI..."):
             if "id" in patient:
-                mcp_summary = AIClinicalAssistant.generate_mcp_summary(f"patient:{patient['id']}")
+                comprehensive_summary = AIClinicalAssistant.generate_mcp_summary(f"patient:{patient['id']}")
             else:
-                mcp_summary = AIClinicalAssistant.generate_mcp_summary()
-            st.markdown(mcp_summary)
+                comprehensive_summary = AIClinicalAssistant.generate_mcp_summary()
+            st.markdown(comprehensive_summary)
     
-    st.markdown("---")
+    # Only add divider in Traditional view
+    if st.session_state.view_mode != "Summary":
+        # Using a more subtle divider with custom styling
+        st.markdown("<div style='height: 1px; background-color: rgba(0,0,0,0.1); margin: 1.5rem 0; opacity: 0.3;'></div>", unsafe_allow_html=True)
 
 def display_exercise_adherence(patient: Dict):
     """Display exercise adherence chart and details."""
@@ -1584,6 +1836,10 @@ def main():
     # Load patient data from Database Simulation
     patients = load_patients_from_database()
     
+    # Initialize view mode in session state if not exists
+    if 'view_mode' not in st.session_state:
+        st.session_state.view_mode = "Traditional View"
+    
     # Patient selector in sidebar with custom styling
     patient_options = {f"{p['id']} - {p['name']}": p for p in patients}
     
@@ -1604,8 +1860,143 @@ def main():
             background-color: #ffffff !important;
             color: #1a1a2e !important;
         }
+        /* Voice mode button styling */
+        .voice-mode-button {
+            background-color: #f0f0f5;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .voice-mode-button:hover {
+            background-color: rgba(46, 204, 113, 0.1);
+        }
+        .voice-mode-button.active {
+            background-color: rgba(46, 204, 113, 0.2);
+            border-color: #2ecc71;
+        }
+        .voice-mode-button i {
+            margin-right: 8px;
+        }
+        /* Voice assistant container */
+        .voice-assistant-container {
+            background-color: rgba(46, 204, 113, 0.05);
+            border: 1px solid rgba(46, 204, 113, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        /* Voice command input */
+        .voice-command-input {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin-bottom: 10px;
+        }
     </style>
     ''', unsafe_allow_html=True)
+    
+    # Add voice mode toggle button to sidebar
+    st.sidebar.markdown("### Voice Assistant")
+    
+    # Check if HUME API key is set
+    has_hume_key = bool(os.getenv("HUME_API_KEY", ""))
+    
+    if not has_hume_key:
+        st.sidebar.warning("⚠️ HUME API key not configured. Voice assistant is disabled.")
+    elif not VOICE_AVAILABLE:
+        st.sidebar.warning("⚠️ Voice processing not available. Check HUME library installation.")
+    else:
+        # Voice mode toggle button with conditional styling based on active state
+        voice_mode_class = "voice-mode-button active" if st.session_state.voice_mode_active else "voice-mode-button"
+        voice_mode_icon = "🔊" if st.session_state.voice_mode_active else "🔈"
+        voice_mode_text = "Voice Mode: ON" if st.session_state.voice_mode_active else "Voice Mode: OFF"
+        
+        st.sidebar.markdown(f"""
+        <div class="{voice_mode_class}" onclick="
+            window.parent.postMessage({{action: 'toggleVoiceMode'}}, '*');
+            setTimeout(function() {{ 
+                window.parent.document.querySelector('[data-testid="stForm"]').submit();
+            }}, 100);
+        ">
+            {voice_mode_icon} {voice_mode_text}
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Add JavaScript to handle the toggle action
+        st.sidebar.markdown("""
+        <script>
+            window.addEventListener('message', function(e) {
+                if (e.data.action === 'toggleVoiceMode') {
+                    // This event will be caught by Streamlit
+                    window.parent.postMessage({type: 'streamlit:setComponentValue', value: true}, '*');
+                }
+            });
+        </script>
+        """, unsafe_allow_html=True)
+        
+        # Add a button as fallback for the custom toggle
+        if st.sidebar.button("Toggle Voice Assistant", key="toggle_voice"):
+            AIClinicalAssistant.toggle_voice_mode()
+            
+        # Add speech recognition toggle only if voice mode is active
+        if st.session_state.voice_mode_active and SPEECH_RECOGNITION_AVAILABLE:
+            st.sidebar.markdown("---")
+            st.sidebar.markdown("### Hands-Free Mode")
+            
+            # Speech recognition toggle button with conditional styling
+            speech_mode_class = "voice-mode-button active" if st.session_state.speech_recognition_active else "voice-mode-button"
+            speech_mode_icon = "🎙️" if st.session_state.speech_recognition_active else "🎤"
+            speech_mode_text = "Speech Recognition: ON" if st.session_state.speech_recognition_active else "Speech Recognition: OFF"
+            
+            st.sidebar.markdown(f"""
+            <div class="{speech_mode_class}" onclick="
+                window.parent.postMessage({{action: 'toggleSpeechRecognition'}}, '*');
+                setTimeout(function() {{ 
+                    window.parent.document.querySelector('[data-testid="stForm"]').submit();
+                }}, 100);
+            ">
+                {speech_mode_icon} {speech_mode_text}
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Add JavaScript to handle the speech recognition toggle
+            st.sidebar.markdown("""
+            <script>
+                window.addEventListener('message', function(e) {
+                    if (e.data.action === 'toggleSpeechRecognition') {
+                        // This event will be caught by Streamlit
+                        window.parent.postMessage({type: 'streamlit:setComponentValue', value: true}, '*');
+                    }
+                });
+            </script>
+            """, unsafe_allow_html=True)
+            
+            # Button as fallback for the custom toggle
+            if st.sidebar.button("Toggle Speech Recognition", key="toggle_speech"):
+                AIClinicalAssistant.toggle_speech_recognition()
+                
+            # Show information about hands-free mode
+            if st.session_state.speech_recognition_active:
+                st.sidebar.success("Hands-free mode active. Say commands like 'Tell me the summary of most critical patient today'")
+                
+                # Add option to view command history
+                if st.session_state.voice_commands_history:
+                    with st.sidebar.expander("Voice Command History"):
+                        for i, cmd in enumerate(reversed(st.session_state.voice_commands_history[-5:])):
+                            st.markdown(f"**{len(st.session_state.voice_commands_history)-i}.** {cmd}")
+                        
+                        if st.button("Clear History", key="clear_history"):
+                            st.session_state.voice_commands_history = []
+                            st.experimental_rerun()
     
     selected_patient_key = st.sidebar.selectbox(
         "Select Patient",
@@ -1617,26 +2008,298 @@ def main():
     
     # Display patient data
     display_patient_header(selected_patient)
-    display_kpi_row(selected_patient)
-    display_alerts(selected_patient)
     
-    # AI Clinical Summary - Add this before other sections
-    display_clinical_summary(selected_patient)
+    # Breadcrumb selector for view mode
+    st.markdown("""
+    <style>
+    .breadcrumb-container {
+        display: flex;
+        padding: 8px 0;
+        margin-bottom: 12px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .breadcrumb-item {
+        padding: 8px 16px;
+        margin-right: 5px;
+        cursor: pointer;
+        border-radius: 4px 4px 0 0;
+        font-weight: 500;
+        transition: all 0.2s;
+    }
+    .breadcrumb-active {
+        background-color: rgba(75, 192, 141, 0.1);
+        border-bottom: 2px solid #2ecc71;
+        color: #1a1a2e;
+    }
+    .breadcrumb-inactive {
+        color: #666;
+        background-color: transparent;
+    }
+    .view-content {
+        padding: 15px 0;
+        display: none;
+    }
+    .view-content-active {
+        display: block;
+    }
+    </style>
+    """, unsafe_allow_html=True)
     
-    display_trends(selected_patient)
+    # Create container for breadcrumb and its content
+    st.markdown("<div class='breadcrumb-view-container'>", unsafe_allow_html=True)
     
-    # Two-column layout for problems and labs
+    # Create the breadcrumb selector with Streamlit buttons
     col1, col2 = st.columns(2)
     
     with col1:
-        display_active_problems(selected_patient)
+        if st.button("Traditional View", key="traditional_view", 
+                     use_container_width=True,
+                     type="primary" if st.session_state.view_mode == "Traditional View" else "secondary"):
+            st.session_state.view_mode = "Traditional View"
+            st.experimental_rerun()
     
     with col2:
-        display_recent_labs(selected_patient)
+        if st.button("Summary", key="summary_view", 
+                     use_container_width=True,
+                     type="primary" if st.session_state.view_mode == "Summary" else "secondary"):
+            st.session_state.view_mode = "Summary"
+            st.experimental_rerun()
     
-    # Billing and exercise adherence
-    display_billing()
-    display_exercise_adherence(selected_patient)
+    # Keep CSS for other buttons in the app
+    st.markdown("""
+    <style>
+    button[kind="secondary"],
+    button.css-5rimss,
+    button.css-gw32o0,
+    button.css-1cpxqw2,
+    button.css-1p1lx2y {
+        background-color: #f8f9fa !important;
+        color: #1a1a2e !important;
+        border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
+    # Close the container
+    st.markdown("</div>", unsafe_allow_html=True)
+    
+    # Display KPI row and alerts in both views
+    display_kpi_row(selected_patient)
+    display_alerts(selected_patient)
+    
+    # Voice Mode UI - show only when activated
+    if st.session_state.voice_mode_active and VOICE_AVAILABLE:
+        # Add voice assistant container with styling
+        st.markdown("""
+        <div class="voice-assistant-container">
+            <h3>🎙️ HUME AI Voice Assistant</h3>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Add WebRTC audio stream for speech recognition if enabled
+        if SPEECH_RECOGNITION_AVAILABLE and st.session_state.speech_recognition_active:
+            # Add a voice activity indicator
+            st.markdown("""
+            <style>
+            .voice-activity-indicator {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+            }
+            .voice-activity-indicator .indicator {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                margin-right: 10px;
+                background-color: #2ecc71;
+                animation: pulse 1.5s infinite;
+            }
+            @keyframes pulse {
+                0% { opacity: 1; }
+                50% { opacity: 0.4; }
+                100% { opacity: 1; }
+            }
+            </style>
+            <div class="voice-activity-indicator">
+                <div class="indicator"></div>
+                <span>Listening for voice commands...</span>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Show last recognized command if available
+            if st.session_state.last_voice_command:
+                st.markdown(f"**Last voice command:** {st.session_state.last_voice_command}")
+                
+                # Process the voice command if it hasn't been processed yet
+                if 'last_processed_command' not in st.session_state or \
+                   st.session_state.last_processed_command != st.session_state.last_voice_command:
+                    # Store the command as being processed
+                    st.session_state.last_processed_command = st.session_state.last_voice_command
+                    
+                    with st.spinner("Processing voice command..."):
+                        # Process the voice command
+                        try:
+                            # Get text and audio response
+                            text_response, selected_critical_patient, audio_bytes = AIClinicalAssistant.process_voice_command(
+                                st.session_state.last_voice_command, patients
+                            )
+                            
+                            # Store in session state for display
+                            st.session_state.voice_output_ready = True
+                            st.session_state.voice_output_audio = audio_bytes
+                            st.session_state.voice_output_text = text_response
+                            
+                            # If a patient was selected, update the selected patient
+                            if selected_critical_patient:
+                                patient_id = selected_critical_patient.get('id')
+                                if patient_id:
+                                    # Find the matching patient key in patient_options
+                                    for key, patient in patient_options.items():
+                                        if patient.get('id') == patient_id:
+                                            # Update selected patient in session state
+                                            st.session_state.selected_patient_key = key
+                                            # Force rerun to update the UI
+                                            st.experimental_rerun()
+                        except Exception as e:
+                            st.error(f"Error processing voice command: {e}")
+            
+            # Add the WebRTC component for audio streaming
+            st.markdown("### Live Microphone")
+            
+            def video_frame_callback(frame):
+                # Just return the frame as we only care about audio
+                return frame
+                
+            def audio_frame_callback(frame):
+                # Process audio here if needed
+                return frame
+            
+            # Add the WebRTC streamer
+            webrtc_ctx = webrtc_streamer(
+                key="speech-to-text",
+                mode=WebRtcMode.SENDONLY,
+                audio_frame_callback=audio_frame_callback,
+                video_frame_callback=video_frame_callback,
+                media_stream_constraints={"video": False, "audio": True},
+                async_processing=True,
+            )
+            
+            # When the WebRTC component is started, start the speech recognition
+            if webrtc_ctx.state.playing and not st.session_state.speech_recognition_active:
+                AIClinicalAssistant.start_speech_recognition()
+            
+            # When the WebRTC component is stopped, stop the speech recognition
+            if not webrtc_ctx.state.playing and st.session_state.speech_recognition_active:
+                AIClinicalAssistant.stop_speech_recognition()
+                
+        # Add voice command input as fallback or for typing mode
+        voice_command = st.text_input("Ask a question or say 'Tell me the summary of most critical patient today'", 
+                                    key="voice_command_input",
+                                    placeholder="Type your voice command here...")
+        
+        # Voice command submission
+        voice_submit_col1, voice_submit_col2 = st.columns([3, 1])
+        with voice_submit_col2:
+            if st.button("🎙️ Submit", key="voice_submit"):
+                if voice_command:
+                    with st.spinner("Processing voice command..."):
+                        # Process the voice command
+                        try:
+                            # Get text and audio response
+                            text_response, selected_critical_patient, audio_bytes = AIClinicalAssistant.process_voice_command(
+                                voice_command, patients
+                            )
+                            
+                            # Store in session state for display
+                            st.session_state.voice_output_ready = True
+                            st.session_state.voice_output_audio = audio_bytes
+                            st.session_state.voice_output_text = text_response
+                            
+                            # If a patient was selected, update the selected patient
+                            if selected_critical_patient:
+                                patient_id = selected_critical_patient.get('id')
+                                if patient_id:
+                                    # Find the matching patient key in patient_options
+                                    for key, patient in patient_options.items():
+                                        if patient.get('id') == patient_id:
+                                            # Update selected patient in session state
+                                            st.session_state.selected_patient_key = key
+                                            # Force rerun to update the UI
+                                            st.experimental_rerun()
+                        except Exception as e:
+                            st.error(f"Error processing voice command: {e}")
+        
+        # Display voice assistant response
+        if st.session_state.voice_output_ready and st.session_state.voice_output_text:
+            st.markdown("### Voice Assistant Response:")
+            st.markdown(st.session_state.voice_output_text)
+            
+            # Add audio playback if available
+            if st.session_state.voice_output_audio:
+                # Convert audio bytes to base64 to be playable in browser
+                import base64
+                audio_b64 = base64.b64encode(st.session_state.voice_output_audio).decode()
+                
+                # Embed audio player with the audio data
+                st.markdown(f"""
+                <audio controls autoplay>
+                    <source src="data:audio/mp3;base64,{audio_b64}" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                """, unsafe_allow_html=True)
+            
+            # Add option to clear voice output
+            if st.button("Clear Voice Output", key="clear_voice"):
+                st.session_state.voice_output_ready = False
+                st.session_state.voice_output_audio = None
+                st.session_state.voice_output_text = ""
+                st.experimental_rerun()
+    
+    # Display view content based on selected view mode
+    if st.session_state.view_mode == "Summary":
+        # In Summary view, we want a more prominent display of the clinical summary
+        st.markdown("""
+        <style>
+        .summary-container {
+            border: 1px solid rgba(46, 204, 113, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            background-color: rgba(46, 204, 113, 0.05);
+            margin-bottom: 15px;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        
+        # Create a container for the summary view with a styled background
+        with st.container():
+            # Display the header inside this container
+            st.markdown("### AI Clinical Summary")
+            
+            # Display clinical summary prominently
+            display_clinical_summary(selected_patient)
+            
+            # Add an expander for additional details if needed
+            with st.expander("View Additional Details"):
+                # Display a subset of the traditional view in the expander
+                display_active_problems(selected_patient)
+                display_recent_labs(selected_patient)
+    else:
+        # Traditional View - display all sections except the AI Clinical Summary
+        # No clinical summary in traditional view as per user's request
+        display_trends(selected_patient)
+        
+        # Two-column layout for problems and labs
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            display_active_problems(selected_patient)
+        
+        with col2:
+            display_recent_labs(selected_patient)
+        
+        # Billing and exercise adherence
+        display_billing()
+        display_exercise_adherence(selected_patient)
 
 if __name__ == "__main__":
     main()
